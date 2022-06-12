@@ -16,7 +16,12 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: f731d07c34b5be6499c3dc59b6e6788f
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: b9360d726a990174a93a29cbce2bef5f
+    m_Address: Assets/Models/cube.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Model
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 67cef809088f8dd4e934a570c16e54ad, type: 2}
   m_SchemaSet:

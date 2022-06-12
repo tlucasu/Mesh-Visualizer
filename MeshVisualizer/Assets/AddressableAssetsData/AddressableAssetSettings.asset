@@ -83,7 +83,9 @@ MonoBehaviour:
     m_ProfileVersion: 1
   m_LabelTable:
     m_LabelNames:
-    - default
+    - Model
+    - Texture
+    - Material
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 1c04ffaebaad9be47a53e1b27361423b, type: 2}
