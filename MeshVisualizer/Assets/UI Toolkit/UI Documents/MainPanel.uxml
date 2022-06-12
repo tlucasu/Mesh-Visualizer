@@ -32,7 +32,10 @@
                         <ui:Slider picking-mode="Ignore" label="Slider" value="42" high-value="100" />
                         <ui:Slider picking-mode="Ignore" label="Slider" value="42" high-value="100" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="models-content-container" class="scrollable-content" />
+                    <ui:VisualElement name="models-content-container" class="scrollable-content" style="display: flex;">
+                        <ui:Button text="Button" display-tooltip-when-elided="true" class="selected-object object-item selected-object-item" />
+                        <ui:Button text="Button" display-tooltip-when-elided="true" class="selected-object object-item" />
+                    </ui:VisualElement>
                     <ui:VisualElement name="materials-content-container" class="scrollable-content" />
                     <ui:VisualElement name="textures-content-container" class="scrollable-content" />
                     <ui:VisualElement name="lighting-content-container" class="scrollable-content" />

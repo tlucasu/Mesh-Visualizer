@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -87,8 +88,8 @@ namespace MeshVisualizer.UI {
                 root.Q<Button>(className: tabSelectedClassName)?.RemoveFromClassList(tabSelectedClassName);
                 
                 //Display content container
-                root.Q<VisualElement>(GetContentContainerName(tab)).style.display =
-                    new StyleEnum<DisplayStyle>(DisplayStyle.Flex);
+                root.Q<VisualElement>(GetContentContainerName(tab)).style.display 
+                    = new StyleEnum<DisplayStyle>(DisplayStyle.Flex);
 
                 //Display panel
                 panel.style.display = new StyleEnum<DisplayStyle>(DisplayStyle.Flex);

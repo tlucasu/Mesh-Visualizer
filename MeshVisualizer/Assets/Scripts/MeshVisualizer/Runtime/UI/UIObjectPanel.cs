@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.Events;
@@ -8,11 +9,17 @@ using UnityEngine.UIElements;
 
 namespace MeshVisualizer.UI {
     public class UIObjectPanel : UIPanel {
-        [SerializeField] private AssetLabelReference assetLabel;
+        private const string objectItemClass = "object-item";
+        private const string selectedObjectItemClass = "selected-object-item";
+        
+        [SerializeField] 
+        private AssetLabelReference assetLabel;
 
-        [Tooltip("When an asset is clicked, call event")]
+        [Tooltip("When an asset element is clicked, trigger event")]
         public UnityEvent<string> onAssetClick;
-
+        
+        private VisualElement lastSelectedItem { get; set; }
+        
         protected void Start() {
             if (assetLabel.RuntimeKeyIsValid())
                 Addressables.LoadResourceLocationsAsync(assetLabel.RuntimeKey).Completed += OnItemListComplete;
@@ -27,21 +34,41 @@ namespace MeshVisualizer.UI {
                 return;
             }
 
+            var keys = obj.Result
+                          .Select(x => x.PrimaryKey)
+                          .ToHashSet()  //strips out any duplicate keys
+                          .ToList();
+           
+            //Sets the keys to be in alphabetical order
+            keys.Sort();
+            
             //Populate content container
-            foreach (var result in obj.Result) {
-                string key = result.PrimaryKey;
-
+            foreach(var key in keys){
                 Button itemButton = new Button() {
-                    name = $"{key.ToLower()}-button",
+                    name = $"{key}-button",
                     text = key
                 };
+                itemButton.AddToClassList(objectItemClass);
 
-                itemButton.clicked += () => { onAssetClick.Invoke(key); };
+                itemButton.clicked += () => {
+                    SelectItem(itemButton);
+                    onAssetClick?.Invoke(key);
+                };
 
                 contentContainer.Add(itemButton);
             }
 
-            // contentContainer.MarkDirtyRepaint();
+            if (contentContainer.childCount != 0) {
+                SelectItem(contentContainer[0]);
+            }
+        }
+
+        private void SelectItem(VisualElement itemElement) {
+            if(lastSelectedItem != null)
+                lastSelectedItem.RemoveFromClassList(selectedObjectItemClass);
+            
+            itemElement.AddToClassList(selectedObjectItemClass);
+            lastSelectedItem = itemElement;
         }
     }
 }
