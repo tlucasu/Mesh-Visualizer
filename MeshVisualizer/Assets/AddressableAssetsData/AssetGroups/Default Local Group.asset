@@ -18,62 +18,67 @@ MonoBehaviour:
   m_GUID: f731d07c34b5be6499c3dc59b6e6788f
   m_SerializeEntries:
   - m_GUID: 101ca5ff4f4b6d241bd4a643c2cc406f
-    m_Address: Assets/Models/donut.fbx
+    m_Address: Donut
     m_ReadOnly: 0
     m_SerializedLabels:
     - Model
   - m_GUID: 5e69c52fdd78b1947ba66b3250bdebf3
-    m_Address: Assets/Models/Suzanne.fbx
+    m_Address: Suzanne
     m_ReadOnly: 0
     m_SerializedLabels:
     - Model
   - m_GUID: 3693014dfebb1a247b48aecb15cdb426
-    m_Address: Assets/Models/cone_low_poly.fbx
+    m_Address: Cone (Low Poly)
     m_ReadOnly: 0
     m_SerializedLabels:
     - Model
   - m_GUID: a8a02df7d9d401d4b8327139e07ee077
-    m_Address: Assets/Models/cylinder_high_poly.fbx
+    m_Address: Cylinder (High Poly)
     m_ReadOnly: 0
     m_SerializedLabels:
     - Model
   - m_GUID: 56f30e95cc47ed149b3376956c88c5d3
-    m_Address: Assets/Models/cylinder_low_poly.fbx
+    m_Address: Cylinder (Low Poly)
     m_ReadOnly: 0
     m_SerializedLabels:
     - Model
   - m_GUID: fccbaed9a64f90e439289d57df899bee
-    m_Address: Assets/Models/ico_spehere_high_poly.fbx
+    m_Address: Sphere (High Poly)
     m_ReadOnly: 0
     m_SerializedLabels:
     - Model
   - m_GUID: 6e01aba4e0acf9248a083d26090fa934
-    m_Address: Assets/Models/ico_spehere_low_poly.fbx
+    m_Address: Sphere (Low Poly)
     m_ReadOnly: 0
     m_SerializedLabels:
     - Model
   - m_GUID: 66957dba81cdfc2418c7e7060980eeab
-    m_Address: Assets/Models/cone_high_poly.fbx
+    m_Address: Cone (High Poly)
     m_ReadOnly: 0
     m_SerializedLabels:
     - Model
   - m_GUID: b9360d726a990174a93a29cbce2bef5f
-    m_Address: Assets/Models/cube.fbx
+    m_Address: Cube
     m_ReadOnly: 0
     m_SerializedLabels:
     - Model
   - m_GUID: aafea2e291c669a448430551a82c5966
-    m_Address: Assets/Materials/Flat.mat
+    m_Address: Flat Material
     m_ReadOnly: 0
     m_SerializedLabels:
     - Material
   - m_GUID: ba436ab4fa590724e9b3876bd2a0bf6e
-    m_Address: Assets/Materials/Metal.mat
+    m_Address: Metal Material
     m_ReadOnly: 0
     m_SerializedLabels:
     - Material
   - m_GUID: e753f27970c6b86489ad54cfb8611387
-    m_Address: Assets/Materials/Glow.mat
+    m_Address: Glow Material
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Material
+  - m_GUID: 0dc64632db0fd13458868c2a4a8b85e9
+    m_Address: Default Material
     m_ReadOnly: 0
     m_SerializedLabels:
     - Material
