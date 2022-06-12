@@ -4,37 +4,27 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 namespace MeshVisualizer {
     public class ModelAssetController : MonoBehaviour {
-        [SerializeField, AssetReferenceUILabelRestriction("Model")]
-        private AssetReferenceGameObject defaultModel;
-
-        [SerializeField, AssetReferenceUILabelRestriction("Texture")]
-        private AssetReferenceTexture defaultTexture;
-
-        [SerializeField, AssetReferenceUILabelRestriction("Material")]
-        private AssetReferenceT<Material> defaultMaterial;
-
+        private string currentModelAssetKey { get; set; }
+        private string currentMaterialAssetKey { get; set; }
+        private string currentTextureAssetKey { get; set; }
+        
         private GameObject currentModel { get; set; }
+        
         private MeshRenderer modelMeshRenderer { get; set; }
         private Texture currentTexture { get; set; }
         private Material currentMaterial { get; set; }
 
-        private void Awake() {
-            if (defaultModel.RuntimeKeyIsValid())
-                defaultModel.InstantiateAsync(this.transform, false).Completed += OnModelLoadComplete;
-
-            if (defaultMaterial.RuntimeKeyIsValid())
-                defaultMaterial.LoadAssetAsync().Completed += OnMaterialLoadComplete;
-
-            if (defaultTexture.RuntimeKeyIsValid())
-                defaultTexture.LoadAssetAsync().Completed += OnTextureLoadComplete;
-        }
 
         public void SwitchModel(string assetKey) {
+            if (currentModelAssetKey == assetKey)
+                return;
+            
             if (currentModel != null) {
                 Addressables.ReleaseInstance(currentModel);
                 modelMeshRenderer = null;
             }
 
+            currentModelAssetKey = assetKey;
             Addressables.InstantiateAsync(assetKey, this.transform, false).Completed += OnModelLoadComplete;
         }
 
@@ -43,10 +33,14 @@ namespace MeshVisualizer {
         }
 
         public void SwitchMaterial(string assetKey) {
+            if (currentMaterialAssetKey == assetKey)
+                return;
+            
             if (currentMaterial != null) {
                 Addressables.Release(currentMaterial);
             }
 
+            currentMaterialAssetKey = assetKey;
             Addressables.LoadAssetAsync<Material>(assetKey).Completed += OnMaterialLoadComplete;
         }
 
@@ -55,10 +49,14 @@ namespace MeshVisualizer {
         }
 
         public void SwitchTexture(string assetKey) {
+            if (currentTextureAssetKey == assetKey)
+                return;
+            
             if (currentTexture != null) {
                 Addressables.Release(currentTexture);
             }
 
+            currentTextureAssetKey = assetKey;
             Addressables.LoadAssetAsync<Texture>(assetKey).Completed += OnTextureLoadComplete;
         }
 

@@ -60,6 +60,7 @@ namespace MeshVisualizer.UI {
 
             if (contentContainer.childCount != 0) {
                 SelectItem(contentContainer[0]);
+                onAssetClick?.Invoke(keys[0]);
             }
         }
 
