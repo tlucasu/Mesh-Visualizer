@@ -44,3 +44,8 @@
     background-color: rgba(60, 60, 60, 0.94);
     color: rgba(255, 255, 255, 255);
 }
+
+.tab-button:hover {
+    background-color: rgba(58, 69, 91, 0.94);
+    color: rgba(255, 255, 255, 255);
+}
