@@ -24,13 +24,14 @@ namespace MeshVisualizer.UI {
         private void Awake() {
             var document = GetComponent<UIDocument>();
             if (document == null) {
-                Debug.LogError($"Failed to initialize {this}, parent must contain UIDocument component");
+                Debug.LogError($"Failed to initialize {this}, must contain UIDocument component");
                 return;
             }
             
             root = document.rootVisualElement;
             if (root == null) {
-                Debug.LogError($"Failed to initialize {this}. UI Document is not setup correctly");
+                Debug.LogError($"Failed to initialize {this}. UI Document is not configured correctly. " +
+                               $"Check that an uxml visual tree asset has been assigned");
                 return;
             }
 
