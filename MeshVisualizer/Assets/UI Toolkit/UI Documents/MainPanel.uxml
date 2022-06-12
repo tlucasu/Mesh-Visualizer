@@ -18,19 +18,28 @@
             <ui:VisualElement name="panel" class="panel" style="margin-left: 5px; margin-right: 5px; margin-top: 20px; margin-bottom: 20px; padding-left: 6px; padding-right: 6px; padding-top: 6px; padding-bottom: 6px; display: none;">
                 <ui:Label text="Models" display-tooltip-when-elided="true" name="panel-title" style="font-size: 32px; -unity-font-style: bold; color: rgb(238, 238, 238); -unity-text-align: middle-center; letter-spacing: 0; -unity-text-outline-width: 1px; -unity-text-outline-color: rgba(0, 0, 0, 0.31);" />
                 <ui:ScrollView name="scroll-view">
-                    <ui:VisualElement name="transform-content-container" class="scrollable-content">
+                    <ui:VisualElement name="transform-content-container" class="scrollable-content" style="display: flex;">
                         <ui:Label text="Position" display-tooltip-when-elided="true" name="position-subtitle" class="subtitle" />
-                        <ui:Slider picking-mode="Ignore" label="Slider" value="42" high-value="100" />
-                        <ui:Slider picking-mode="Ignore" label="Slider" value="42" high-value="100" />
-                        <ui:Slider picking-mode="Ignore" label="Slider" value="42" high-value="100" />
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="Left" display-tooltip-when-elided="true" class="slider-label" />
+                            <ui:Slider picking-mode="Ignore" value="0" high-value="1" name="horizontal-position-slider" low-value="-1" class="slider" style="flex-grow: 1;" />
+                            <ui:Label text="Right" display-tooltip-when-elided="true" class="slider-label" />
+                        </ui:VisualElement>
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="Down" display-tooltip-when-elided="true" class="slider-label" style="flex-shrink: 1;" />
+                            <ui:Slider picking-mode="Ignore" value="0" high-value="1" name="vertical-position-slider" low-value="-1" class="slider" />
+                            <ui:Label text="Up" display-tooltip-when-elided="true" class="slider-label" />
+                        </ui:VisualElement>
                         <ui:Label text="Rotation" display-tooltip-when-elided="true" name="rotation-subtitle" class="subtitle" />
                         <ui:Slider picking-mode="Ignore" label="Slider" value="42" high-value="100" />
                         <ui:Slider picking-mode="Ignore" label="Slider" value="42" high-value="100" />
                         <ui:Slider picking-mode="Ignore" label="Slider" value="42" high-value="100" />
                         <ui:Label text="Scale" display-tooltip-when-elided="true" name="scale-subtitle" class="subtitle" />
-                        <ui:Slider picking-mode="Ignore" label="Slider" value="42" high-value="100" />
-                        <ui:Slider picking-mode="Ignore" label="Slider" value="42" high-value="100" />
-                        <ui:Slider picking-mode="Ignore" label="Slider" value="42" high-value="100" />
+                        <ui:VisualElement style="flex-direction: row;">
+                            <ui:Label text="Smaller" display-tooltip-when-elided="true" class="slider-label" style="flex-shrink: 1;" />
+                            <ui:Slider picking-mode="Ignore" value="1" high-value="1.5" name="scale-slider" low-value="0.5" class="slider" />
+                            <ui:Label text="Larger" display-tooltip-when-elided="true" class="slider-label" />
+                        </ui:VisualElement>
                     </ui:VisualElement>
                     <ui:VisualElement name="models-content-container" class="scrollable-content" style="display: flex;" />
                     <ui:VisualElement name="materials-content-container" class="scrollable-content" />
