@@ -17,7 +17,7 @@
 
 .subtitle {
     font-size: 18px;
-    color: rgba(209, 209, 209, 255);
+    color: rgb(209, 209, 209);
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 10px;
@@ -26,5 +26,8 @@
 }
 
 .unity-label {
-    color: rgba(195, 195, 195, 255);
+    color: rgb(195, 195, 195);
+}
+
+.selected-tab-button {
 }

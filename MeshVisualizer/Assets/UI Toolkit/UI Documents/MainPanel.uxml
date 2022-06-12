@@ -1,10 +1,10 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UIDocuments/MainPanel.uss?fileID=7433441132597879392&amp;guid=cc16ee631e6d120439e3ee6c4438b43b&amp;type=3#MainPanel" />
+    <Style src="project://database/Assets/UI%20Toolkit/UI%20Documents/MainPanel.uss?fileID=7433441132597879392&amp;guid=cc16ee631e6d120439e3ee6c4438b43b&amp;type=3#MainPanel" />
     <ui:VisualElement name="screen" style="width: 100%; height: 100%; flex-direction: row;">
         <ui:VisualElement name="tab-bar">
             <ui:VisualElement name="spacer" style="flex-grow: 1; flex-shrink: 0;" />
             <ui:VisualElement name="tab-container" style="flex-direction: column; flex-shrink: 0;">
-                <ui:Button text="Transform" display-tooltip-when-elided="true" name="models-tab-button" tooltip="Models" class="tab-button" />
+                <ui:Button text="Transform" display-tooltip-when-elided="true" name="transform-tab-button" tooltip="Models" class="tab-button" />
                 <ui:Button text="Models" display-tooltip-when-elided="true" name="models-tab-button" tooltip="Models" class="tab-button" />
                 <ui:Button text="Materials" display-tooltip-when-elided="true" name="materials-tab-button" tooltip="Materials" class="tab-button" />
                 <ui:Button text="Textures" display-tooltip-when-elided="true" name="textures-tab-button" tooltip="Textures" class="tab-button" />
@@ -15,7 +15,7 @@
         </ui:VisualElement>
         <ui:VisualElement name="panel-bar" style="width: 30%;">
             <ui:VisualElement name="spacer" style="flex-grow: 1; flex-shrink: 0;" />
-            <ui:VisualElement name="panel" class="panel" style="margin-left: 5px; margin-right: 5px; margin-top: 20px; margin-bottom: 20px; padding-left: 6px; padding-right: 6px; padding-top: 6px; padding-bottom: 6px; display: none;">
+            <ui:VisualElement name="panel" class="panel" style="margin-left: 5px; margin-right: 5px; margin-top: 20px; margin-bottom: 20px; padding-left: 6px; padding-right: 6px; padding-top: 6px; padding-bottom: 6px; display: flex;">
                 <ui:Label text="Models" display-tooltip-when-elided="true" name="panel-title" style="font-size: 32px; -unity-font-style: bold; color: rgb(238, 238, 238); -unity-text-align: middle-center; letter-spacing: 0; -unity-text-outline-width: 1px; -unity-text-outline-color: rgba(0, 0, 0, 0.31);" />
                 <ui:ScrollView name="scroll-view">
                     <ui:VisualElement name="transform-content-container" class="scrollable-content">
