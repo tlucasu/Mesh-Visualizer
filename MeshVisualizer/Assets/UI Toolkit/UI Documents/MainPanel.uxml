@@ -15,7 +15,7 @@
         </ui:VisualElement>
         <ui:VisualElement name="panel-bar" style="width: 30%;">
             <ui:VisualElement name="spacer" style="flex-grow: 1; flex-shrink: 0;" />
-            <ui:VisualElement name="panel" class="panel" style="margin-left: 5px; margin-right: 5px; margin-top: 20px; margin-bottom: 20px; padding-left: 6px; padding-right: 6px; padding-top: 6px; padding-bottom: 6px; display: flex;">
+            <ui:VisualElement name="panel" class="panel" style="margin-left: 5px; margin-right: 5px; margin-top: 20px; margin-bottom: 20px; padding-left: 6px; padding-right: 6px; padding-top: 6px; padding-bottom: 6px; display: none;">
                 <ui:Label text="Models" display-tooltip-when-elided="true" name="panel-title" style="font-size: 32px; -unity-font-style: bold; color: rgb(238, 238, 238); -unity-text-align: middle-center; letter-spacing: 0; -unity-text-outline-width: 1px; -unity-text-outline-color: rgba(0, 0, 0, 0.31);" />
                 <ui:ScrollView name="scroll-view">
                     <ui:VisualElement name="transform-content-container" class="scrollable-content">
@@ -32,10 +32,7 @@
                         <ui:Slider picking-mode="Ignore" label="Slider" value="42" high-value="100" />
                         <ui:Slider picking-mode="Ignore" label="Slider" value="42" high-value="100" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="models-content-container" class="scrollable-content" style="display: flex;">
-                        <ui:Button text="Button" display-tooltip-when-elided="true" class="selected-object object-item selected-object-item" />
-                        <ui:Button text="Button" display-tooltip-when-elided="true" class="selected-object object-item" />
-                    </ui:VisualElement>
+                    <ui:VisualElement name="models-content-container" class="scrollable-content" style="display: flex;" />
                     <ui:VisualElement name="materials-content-container" class="scrollable-content" />
                     <ui:VisualElement name="textures-content-container" class="scrollable-content" />
                     <ui:VisualElement name="lighting-content-container" class="scrollable-content" />
