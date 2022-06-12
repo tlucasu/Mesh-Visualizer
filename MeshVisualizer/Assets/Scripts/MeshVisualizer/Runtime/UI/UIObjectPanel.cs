@@ -15,6 +15,7 @@ namespace MeshVisualizer.UI {
         [SerializeField] 
         private AssetLabelReference assetLabel;
 
+        [Header("Events")]
         [Tooltip("When an asset element is clicked, trigger event")]
         public UnityEvent<string> onAssetClick;
         

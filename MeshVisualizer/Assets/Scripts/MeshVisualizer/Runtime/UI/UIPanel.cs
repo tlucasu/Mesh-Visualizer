@@ -3,7 +3,7 @@ using UnityEngine.UIElements;
 
 namespace MeshVisualizer.UI {
     public abstract class UIPanel : MonoBehaviour {
-        [SerializeField]
+        [SerializeField][Header("UI Properties")]
         [Tooltip("Name of the tab button in the UXML that when clicked will toggle the panel to display this content")]
         protected string tabName;
 

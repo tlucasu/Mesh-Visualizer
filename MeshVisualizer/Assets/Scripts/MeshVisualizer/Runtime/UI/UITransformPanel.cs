@@ -1,3 +1,4 @@
+using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UIElements;
 
@@ -7,9 +8,10 @@ namespace MeshVisualizer.UI {
         private const string verticalPositionSliderName = "vertical-position-slider";
         private const string scaleSliderName = "scale-slider";
 
-        public UnityAction<float> onHorizontalPositionChanged;
-        public UnityAction<float> onVerticalPositionChanged;
-        public UnityAction<float> onScaleChanged;
+        [Header("Events")]
+        public UnityEvent<float> onHorizontalPositionChanged;
+        public UnityEvent<float> onVerticalPositionChanged;
+        public UnityEvent<float> onScaleChanged;
 
         private void Start() {
             Slider horizontalSlider = contentContainer.Q<Slider>(horizontalPositionSliderName);
