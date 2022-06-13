@@ -8,6 +8,8 @@ namespace MeshVisualizer.UI {
         //UI Element Names
         private const string panelName = "panel";
         private const string panelTitleName = "panel-title";
+        private const string screenName = "screen";
+        private const string spacerName = "spacer";
         
         //Class names
         private const string tabClassName = "tab-button";
@@ -36,6 +38,8 @@ namespace MeshVisualizer.UI {
                 return;
             }
 
+            root.Q<VisualElement>(screenName).RegisterCallback<ClickEvent>(OnScreenClicked);
+
             panelTitle = root.Q<Label>(panelTitleName);
             if (panelTitle == null) {
                 Debug.LogError($"Failed to initialize {this}. UI Document does not contain label named '{panelTitleName}'");
@@ -62,9 +66,35 @@ namespace MeshVisualizer.UI {
                 });
         }
 
+        private void OnScreenClicked(ClickEvent evt) {
+            if (!IsEmptySpace(evt.target)) {
+                return;
+            }
+
+            HideAllContentContainers();
+            
+            //Hide panel
+            panel.style.display = new StyleEnum<DisplayStyle>(DisplayStyle.None);
+            
+            //remove unselect any tabs
+            root
+                .Query<Button>(className: tabSelectedClassName)
+                .ForEach(button => {
+                button.RemoveFromClassList(tabSelectedClassName);
+            });
+        }
+
+        private bool IsEmptySpace(IEventHandler eventHandler) {
+            if (eventHandler is VisualElement element) {
+                return element.name is spacerName or screenName;
+            }
+            return false;
+        }
+
         private void OnTabClicked(ClickEvent evt) {
             if(evt.currentTarget is Button tab) {
                 ToggleTab(tab);
+                evt.StopPropagation();
             }
         }
 
