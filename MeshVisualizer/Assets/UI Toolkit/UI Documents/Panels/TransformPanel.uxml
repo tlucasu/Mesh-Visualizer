@@ -1,49 +1,47 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI%20Toolkit/UI%20Documents/TabbedMenu.uss?fileID=7433441132597879392&amp;guid=cc16ee631e6d120439e3ee6c4438b43b&amp;type=3#TabbedMenu" />
+    <Style src="project://database/Assets/UI%20Toolkit/UI%20Documents/TabbedMenu.uss?fileID=7433441132597879392&amp;guid=cc16ee631e6d120439e3ee6c4438b43b&amp;type=3#MainPanel" />
     <Style src="project://database/Assets/UI%20Toolkit/UI%20Documents/Panels/TransformPanel.uss?fileID=7433441132597879392&amp;guid=c1cf55ada32a242499661b55dc71f39d&amp;type=3#TransformPanel" />
-    <ui:VisualElement name="content-container" class="scrollable-content" style="display: flex;">
-        <ui:VisualElement name="position-subtitle-container" class="subtitle-container">
-            <ui:Label text="Position" display-tooltip-when-elided="true" name="position-subtitle-label" class="subtitle" />
-            <ui:VisualElement name="flex-space" style="flex-grow: 1; flex-shrink: 0;" />
-            <ui:Button text="Reset" display-tooltip-when-elided="true" name="position-reset-button" class="reset-button" />
-        </ui:VisualElement>
-        <ui:VisualElement name="x-position-field" class="slider-field">
-            <ui:Label text="X Axis" display-tooltip-when-elided="true" class="slider-label" />
-            <ui:Slider picking-mode="Ignore" value="0" high-value="1" name="x-position-slider" low-value="-1" class="slider" style="flex-grow: 1;" />
-        </ui:VisualElement>
-        <ui:VisualElement name="y-position-field" class="slider-field">
-            <ui:Label text="Y Axis" display-tooltip-when-elided="true" class="slider-label" />
-            <ui:Slider picking-mode="Ignore" value="0" high-value="1" name="y-position-slider" low-value="-1" class="slider" style="flex-grow: 1;" />
-        </ui:VisualElement>
-        <ui:VisualElement name="z-position-field" class="slider-field">
-            <ui:Label text="Z Axis" display-tooltip-when-elided="true" class="slider-label" style="flex-shrink: 1;" />
-            <ui:Slider picking-mode="Ignore" value="0" high-value="1" name="z-position-slider" low-value="-1" class="slider" />
-        </ui:VisualElement>
-        <ui:VisualElement name="rotation-subtitle-container" class="subtitle-container">
-            <ui:Label text="Rotation" display-tooltip-when-elided="true" name="rotation-subtitle-label" class="subtitle" />
-            <ui:VisualElement name="flex-space" style="flex-grow: 1; flex-shrink: 0;" />
-            <ui:Button text="Reset" display-tooltip-when-elided="true" name="rotation-reset-button" class="reset-button" />
-        </ui:VisualElement>
-        <ui:VisualElement name="x-rotation-field" class="slider-field">
-            <ui:Label text="X Axis" display-tooltip-when-elided="true" class="slider-label" />
-            <ui:Slider picking-mode="Ignore" value="0" high-value="180" name="x-rotation-slider" low-value="-180" class="slider" style="flex-grow: 1;" />
-        </ui:VisualElement>
-        <ui:VisualElement name="y-rotation-field" class="slider-field">
-            <ui:Label text="Y Axis" display-tooltip-when-elided="true" class="slider-label" />
-            <ui:Slider picking-mode="Ignore" value="0" high-value="180" name="y-rotation-slider" low-value="-180" class="slider" style="flex-grow: 1;" />
-        </ui:VisualElement>
-        <ui:VisualElement name="z-rotation-field" class="slider-field">
-            <ui:Label text="Z Axis" display-tooltip-when-elided="true" class="slider-label" />
-            <ui:Slider picking-mode="Ignore" value="0" high-value="180" name="z-rotation-slider" low-value="-180" class="slider" style="flex-grow: 1;" />
-        </ui:VisualElement>
-        <ui:VisualElement name="scale-subtitle-container" class="subtitle-container">
-            <ui:Label text="Scale" display-tooltip-when-elided="true" name="scale-subtitle-label" class="subtitle" />
-            <ui:VisualElement name="flex-space" style="flex-grow: 1; flex-shrink: 0;" />
-            <ui:Button text="Reset" display-tooltip-when-elided="true" name="scale-reset-button" class="reset-button" />
-        </ui:VisualElement>
-        <ui:VisualElement name="scale-field" class="slider-field">
-            <ui:Label text="Size" display-tooltip-when-elided="true" class="slider-label" style="flex-shrink: 1;" />
-            <ui:Slider picking-mode="Ignore" value="1" high-value="1.5" name="scale-slider" low-value="0.5" class="slider" />
-        </ui:VisualElement>
+    <ui:VisualElement name="position-subtitle-container" class="subtitle-container">
+        <ui:Label text="Position" display-tooltip-when-elided="true" name="position-subtitle-label" class="subtitle" />
+        <ui:VisualElement name="flex-space" style="flex-grow: 1; flex-shrink: 0;" />
+        <ui:Button text="Reset" display-tooltip-when-elided="true" name="position-reset-button" class="reset-button" />
+    </ui:VisualElement>
+    <ui:VisualElement name="x-position-field" class="slider-field">
+        <ui:Label text="X Axis" display-tooltip-when-elided="true" class="slider-label" />
+        <ui:Slider picking-mode="Ignore" value="0" high-value="1" name="x-position-slider" low-value="-1" class="slider" style="flex-grow: 1;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="y-position-field" class="slider-field">
+        <ui:Label text="Y Axis" display-tooltip-when-elided="true" class="slider-label" />
+        <ui:Slider picking-mode="Ignore" value="0" high-value="1" name="y-position-slider" low-value="-1" class="slider" style="flex-grow: 1;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="z-position-field" class="slider-field">
+        <ui:Label text="Z Axis" display-tooltip-when-elided="true" class="slider-label" style="flex-shrink: 1;" />
+        <ui:Slider picking-mode="Ignore" value="0" high-value="1" name="z-position-slider" low-value="-1" class="slider" />
+    </ui:VisualElement>
+    <ui:VisualElement name="rotation-subtitle-container" class="subtitle-container">
+        <ui:Label text="Rotation" display-tooltip-when-elided="true" name="rotation-subtitle-label" class="subtitle" />
+        <ui:VisualElement name="flex-space" style="flex-grow: 1; flex-shrink: 0;" />
+        <ui:Button text="Reset" display-tooltip-when-elided="true" name="rotation-reset-button" class="reset-button" />
+    </ui:VisualElement>
+    <ui:VisualElement name="x-rotation-field" class="slider-field">
+        <ui:Label text="X Axis" display-tooltip-when-elided="true" class="slider-label" />
+        <ui:Slider picking-mode="Ignore" value="0" high-value="180" name="x-rotation-slider" low-value="-180" class="slider" style="flex-grow: 1;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="y-rotation-field" class="slider-field">
+        <ui:Label text="Y Axis" display-tooltip-when-elided="true" class="slider-label" />
+        <ui:Slider picking-mode="Ignore" value="0" high-value="180" name="y-rotation-slider" low-value="-180" class="slider" style="flex-grow: 1;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="z-rotation-field" class="slider-field">
+        <ui:Label text="Z Axis" display-tooltip-when-elided="true" class="slider-label" />
+        <ui:Slider picking-mode="Ignore" value="0" high-value="180" name="z-rotation-slider" low-value="-180" class="slider" style="flex-grow: 1;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="scale-subtitle-container" class="subtitle-container">
+        <ui:Label text="Scale" display-tooltip-when-elided="true" name="scale-subtitle-label" class="subtitle" />
+        <ui:VisualElement name="flex-space" style="flex-grow: 1; flex-shrink: 0;" />
+        <ui:Button text="Reset" display-tooltip-when-elided="true" name="scale-reset-button" class="reset-button" />
+    </ui:VisualElement>
+    <ui:VisualElement name="scale-field" class="slider-field">
+        <ui:Label text="Size" display-tooltip-when-elided="true" class="slider-label" style="flex-shrink: 1;" />
+        <ui:Slider picking-mode="Ignore" value="1" high-value="1.5" name="scale-slider" low-value="0.5" class="slider" />
     </ui:VisualElement>
 </ui:UXML>
