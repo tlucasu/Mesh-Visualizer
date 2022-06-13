@@ -1,0 +1,76 @@
+{
+    "name": "InputControls",
+    "maps": [
+        {
+            "name": "Default",
+            "id": "42b183b0-c2a1-4512-b943-aa8abe910b63",
+            "actions": [
+                {
+                    "name": "Screen Drag",
+                    "type": "Value",
+                    "id": "de59e109-5221-477f-9146-138cf9d41979",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Screen Press",
+                    "type": "Button",
+                    "id": "ebe229df-27ad-4c38-9c2c-ea7cf4fa0f45",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e8031970-3768-407f-b4e0-29a58c19f9f7",
+                    "path": "<Pointer>/delta",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Screen Drag",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6fff3da3-159b-4779-9cfa-763569170b03",
+                    "path": "<Touchscreen>/delta",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Screen Drag",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d40b4ca4-3da4-424f-827a-35d280e1e866",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Screen Press",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "22840a80-5b58-43e0-8031-d0ea2264dff5",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Screen Press",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
