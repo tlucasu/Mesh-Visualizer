@@ -9,6 +9,7 @@ using UnityEngine.UIElements;
 
 namespace MeshVisualizer.UI {
     public class UIObjectPanel : UIPanel {
+        private const string objectContainerName = "object-container";
         private const string objectItemClass = "object-item";
         private const string selectedObjectItemClass = "selected-object-item";
         
@@ -19,9 +20,19 @@ namespace MeshVisualizer.UI {
         [Tooltip("When an asset element is clicked, trigger event")]
         public UnityEvent<string> onAssetClick;
         
+        private VisualElement objectContainer { get; set; }
         private VisualElement lastSelectedItem { get; set; }
         
         protected void Start() {
+            //using object container instead of content container for more flexibility if more
+            //content is added to the object panel in the future
+            objectContainer = contentContainer.Q<VisualElement>(objectContainerName);
+            if (objectContainer == null) {
+                Debug.LogError($"Unable to find '{objectContainerName}' in content container. Make sure the correct" +
+                               $" VisualTreeAsset is assigned {this}.");
+                return;
+            }
+            
             if (assetLabel.RuntimeKeyIsValid())
                 Addressables.LoadResourceLocationsAsync(assetLabel.RuntimeKey).Completed += OnItemListComplete;
             else {
@@ -30,6 +41,9 @@ namespace MeshVisualizer.UI {
         }
 
         private void OnItemListComplete(AsyncOperationHandle<IList<IResourceLocation>> obj) {
+            //initializes the object container
+            objectContainer.Clear(); 
+            
             if (obj.Result.Count == 0) {
                 Debug.LogWarning($"No objects were found with the label '{assetLabel.RuntimeKey}'");
                 return;
