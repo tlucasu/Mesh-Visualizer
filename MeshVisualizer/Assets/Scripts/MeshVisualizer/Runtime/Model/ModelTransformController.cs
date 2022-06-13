@@ -4,17 +4,14 @@ using UnityEngine;
 
 public class ModelTransformController : MonoBehaviour
 {
-    public void SetHorizontalPosition(float x) {
-        //Not caching transform as its no longer need for performance gains
-        var positions = transform.localPosition;
-        positions.x = x;
-        transform.localPosition = positions;
+    public void SetPosition(Vector3 newPosition) {
+        //Local position is used to allow for the model anchor to be nested in another
+        //game object and be localed else where in the world 
+        transform.localPosition = newPosition;
     }
-    public void SetVerticalPosition(float y) {
-        //Not caching transform as its no longer need for performance gains
-        var position = transform.localPosition;
-        position.y = y;
-        transform.localPosition = position;
+    
+    public void SetRotation(Vector3 newRotation) {
+        transform.localRotation = Quaternion.Euler(newRotation);
     }
     
     public void SetScale(float scale) {
