@@ -1,0 +1,26 @@
+.object-item {
+    background-color: rgba(51, 51, 51, 0);
+    color: rgba(185, 185, 185, 255);
+    font-size: 18px;
+    -unity-font-style: bold;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+.object-item:hover {
+    border-left-color: rgba(135, 135, 135, 255);
+    border-right-color: rgba(135, 135, 135, 255);
+    border-top-color: rgba(135, 135, 135, 255);
+    border-bottom-color: rgba(135, 135, 135, 255);
+}
+
+.selected-object-item {
+    background-color: rgba(94, 94, 94, 0.45);
+    color: rgba(255, 255, 255, 255);
+}

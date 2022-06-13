@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/UI%20Documents/MainPanel.uss?fileID=7433441132597879392&amp;guid=cc16ee631e6d120439e3ee6c4438b43b&amp;type=3#MainPanel" />
+    <Style src="project://database/Assets/UI%20Toolkit/UI%20Documents/Panels/ObjectPanel.uss?fileID=7433441132597879392&amp;guid=f82fbfb434965174487121c446cb7d95&amp;type=3#ObjectPanel" />
+    <ui:VisualElement name="content-container" class="scrollable-content" style="display: flex;">
+        <ui:Button text="Button" display-tooltip-when-elided="true" name="example-object" class="object-item" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" name="example-object" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" name="example-object" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" name="example-object" />
+    </ui:VisualElement>
+</ui:UXML>
