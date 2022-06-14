@@ -40,19 +40,19 @@ namespace MeshVisualizer.UI {
             }
         }
 
-        private void OnItemListComplete(AsyncOperationHandle<IList<IResourceLocation>> obj) {
+        private void OnItemListComplete(AsyncOperationHandle<IList<IResourceLocation>> handle) {
             //initializes the object container
             objectContainer.Clear(); 
             
-            if (obj.Result.Count == 0) {
+            if (handle.Result.Count == 0) {
                 Debug.LogWarning($"No objects were found with the label '{assetLabel.RuntimeKey}'");
                 return;
             }
 
-            var keys = obj.Result
-                          .Select(x => x.PrimaryKey)
-                          .ToHashSet()  //strips out any duplicate keys
-                          .ToList();
+            List<string> keys = handle.Result
+                                      .Select(x => x.PrimaryKey)
+                                      .ToHashSet()  //strips out any duplicate keys
+                                      .ToList();
            
             //Sets the keys to be in alphabetical order
             keys.Sort();
@@ -72,11 +72,8 @@ namespace MeshVisualizer.UI {
 
                 contentContainer.Add(itemButton);
             }
-
-            if (contentContainer.childCount != 0) {
-                SelectItem(contentContainer[0]);
-                onAssetClick?.Invoke(keys[0]);
-            }
+            
+            Addressables.Release(handle);
         }
 
         private void SelectItem(VisualElement itemElement) {
