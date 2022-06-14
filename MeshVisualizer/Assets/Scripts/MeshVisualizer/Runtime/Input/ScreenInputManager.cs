@@ -15,6 +15,11 @@ namespace MeshVisualizer.Input {
         [Tooltip("Called when either touch or mouse pointer is dragged on the screen")]
         public UnityEvent<Vector2> onPointerDrag;
         
+        public UnityEvent onPointerPressed;
+        public UnityEvent onPointerReleased;
+        
+        public Vector2 pointerScreenPosition { get; set; }
+        
         private void Awake() {
             inputControls = new InputControls();
             inputControls.Default.ScreenPress.started += OnScreenPressed;
@@ -50,16 +55,25 @@ namespace MeshVisualizer.Input {
         }
 
         private void OnScreenPressed(InputAction.CallbackContext context) {
+            //initialize the screen position before starting to read
+            pointerScreenPosition = inputControls.Default.ScreenDrag.ReadValue<Vector2>();
             inputControls.Default.ScreenDrag.performed += OnScreenDrag;
+            onPointerPressed.Invoke();
         }
         
         private void OnScreenReleased(InputAction.CallbackContext context) {
             inputControls.Default.ScreenDrag.performed -= OnScreenDrag;
+            // inputControls.Default.ScreenPosition
+            onPointerReleased.Invoke();
         }
 
         private void OnScreenDrag(InputAction.CallbackContext context) {
-            var value = context.ReadValue<Vector2>();
-            Debug.Log(value);
+            var newScreenPosition = context.ReadValue<Vector2>();
+            
+            var delta = newScreenPosition - pointerScreenPosition;
+            pointerScreenPosition = newScreenPosition;
+            
+            onPointerDrag.Invoke(delta);
         }
     }
 }

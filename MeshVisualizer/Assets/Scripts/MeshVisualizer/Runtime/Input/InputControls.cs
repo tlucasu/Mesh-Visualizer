@@ -31,7 +31,7 @@ namespace MeshVisualizer.Input
             ""actions"": [
                 {
                     ""name"": ""Screen Drag"",
-                    ""type"": ""Value"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""de59e109-5221-477f-9146-138cf9d41979"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
@@ -52,8 +52,8 @@ namespace MeshVisualizer.Input
                 {
                     ""name"": """",
                     ""id"": ""e8031970-3768-407f-b4e0-29a58c19f9f7"",
-                    ""path"": ""<Pointer>/delta"",
-                    ""interactions"": ""Press"",
+                    ""path"": ""<Pointer>/position"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Screen Drag"",
@@ -63,8 +63,8 @@ namespace MeshVisualizer.Input
                 {
                     ""name"": """",
                     ""id"": ""6fff3da3-159b-4779-9cfa-763569170b03"",
-                    ""path"": ""<Touchscreen>/delta"",
-                    ""interactions"": ""Press"",
+                    ""path"": ""<Touchscreen>/position"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Screen Drag"",
