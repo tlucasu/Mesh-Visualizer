@@ -82,6 +82,21 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - Material
+  - m_GUID: b5e307b958f45a9458c8d08411570e12
+    m_Address: Concrete
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Texture
+  - m_GUID: d5591439d9f778f49bfc6dc08dbeca2f
+    m_Address: No Texture
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Texture
+  - m_GUID: ade8f915c5861fd44b2f78960c3bec95
+    m_Address: Metal
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Texture
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 67cef809088f8dd4e934a570c16e54ad, type: 2}
   m_SchemaSet:
