@@ -1,5 +1,6 @@
 using System;
 using MeshVisualizer.Input;
+using MeshVisualizer.Runtime.UI;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -155,12 +156,17 @@ namespace MeshVisualizer.UI {
                 root.Q<Button>(className: tabSelectedClassName)?.RemoveFromClassList(tabSelectedClassName);
                 
                 //Display content container
-                root.Q<VisualElement>(GetContentContainerName(tab)).style.display 
-                    = new StyleEnum<DisplayStyle>(DisplayStyle.Flex);
+                var contentContainer = root.Q<VisualElement>(GetContentContainerName(tab));
+                contentContainer.style.display = new StyleEnum<DisplayStyle>(DisplayStyle.Flex);
+                
+                //Send Display Event
+                var displayEvent = DisplayEvent.GetPooled();
+                displayEvent.target = contentContainer;
+                contentContainer.SendEvent(displayEvent);
 
                 //Display panel
                 panel.style.display = new StyleEnum<DisplayStyle>(DisplayStyle.Flex);
-
+                
                 panelTitle.text = tab.text;
                 
                 tab.AddToClassList(tabSelectedClassName);
@@ -183,6 +189,6 @@ namespace MeshVisualizer.UI {
         private bool IsSelected(VisualElement tab) => tab.ClassListContains(tabSelectedClassName);
 
         //Returns the contain container name for the provided tab
-        private string GetContentContainerName(VisualElement tab) => tab.name.Replace(tabSuffix, contentSuffix);
+        public string GetContentContainerName(VisualElement tab) => tab.name.Replace(tabSuffix, contentSuffix);
     }
 }
