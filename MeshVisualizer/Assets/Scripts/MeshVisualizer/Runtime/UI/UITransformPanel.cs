@@ -1,6 +1,6 @@
 using System;
+using MeshVisualizer.Runtime.UI;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UIElements;
 
 namespace MeshVisualizer.UI {
@@ -24,10 +24,8 @@ namespace MeshVisualizer.UI {
         private const string rotationResetButtonName = "rotation-reset-button";
         private const string scaleResetButtonName = "scale-reset-button";
 
-        [Header("Events")]
-        public UnityEvent<Vector3> onPositionChanged;
-        public UnityEvent<Vector3> onRotationChanged;
-        public UnityEvent<float> onScaleChanged;
+        [Header("Target")]
+        public ModelTransformController transformController;
 
         //Positional Sliders
         private Slider xPositionSlider { get; set; }
@@ -48,6 +46,13 @@ namespace MeshVisualizer.UI {
             if (contentContainer == null)
                 return;
             
+            if(transformController == null) {
+                Debug.LogError($"Transform Controller not set on {this}. Cannot initialize Transform Panel");
+                return;
+            }
+
+            contentContainer.RegisterCallback<DisplayEvent>(OnDisplayEvent);
+            
             //Register Position Sliders
             xPositionSlider = RegisterSlider(xPositionSliderName, OnPositionSliderChanged);
             yPositionSlider = RegisterSlider(yPositionSliderName, OnPositionSliderChanged);
@@ -65,6 +70,27 @@ namespace MeshVisualizer.UI {
             InitializeResetButton(positionResetButtonName, OnPositionResetClicked);
             InitializeResetButton(rotationResetButtonName, OnRotationResetClicked);
             InitializeResetButton(scaleResetButtonName, OnScaleResetClicked);
+            
+            InitializePositionSliderMinMax();
+        }
+
+        private void OnDisplayEvent(DisplayEvent evt) => UpdaterSlideValues();
+
+        private void InitializePositionSliderMinMax() {
+            xPositionSlider.lowValue = transformController.xPositionConstraint.min;
+            xPositionSlider.highValue = transformController.xPositionConstraint.max;
+            
+            yPositionSlider.lowValue = transformController.yPositionConstraint.min;
+            yPositionSlider.highValue = transformController.yPositionConstraint.max;
+            
+            zPositionSlider.lowValue = transformController.zPositionConstraint.min;
+            zPositionSlider.highValue = transformController.zPositionConstraint.max;
+        }
+
+        private void UpdaterSlideValues() {
+            SetPositionSliderValues(transformController.transform.localPosition);
+            SetRotationSliderValues(transformController.transform.localRotation.eulerAngles);
+            SetScaleSliderValue(transformController.transform.localScale.x);
         }
 
         /// <summary>
@@ -83,13 +109,13 @@ namespace MeshVisualizer.UI {
         /// <summary>
         /// Finds the button by '<paramref name="buttonName"/>' then registers clicked event with '<paramref name="callback"/>'
         /// </summary>
-        private void InitializeResetButton(string buttonName, Action callback) {
+        private void InitializeResetButton(string buttonName, EventCallback<ClickEvent> callback) {
             Button button = contentContainer.Q<Button>(buttonName);
             if (button == null) {
                 Debug.LogError($"Unable to find '{buttonName}' in content container. Make sure the correct VisualTreeAsset is assigned {this}.");
                 return;
             }
-            button.clicked += callback;
+            button.RegisterCallback(callback);
         }
 
 
@@ -102,51 +128,51 @@ namespace MeshVisualizer.UI {
                 y = yPositionSlider.value,
                 z = zPositionSlider.value,
             };
-            onPositionChanged.Invoke(newPosition);
+            transformController.SetLocalPositionWithConstraints(newPosition);
         }
         
         /// <summary>
         /// Invoked when any rotation-slider's value is changed
         /// </summary>
-        /// <param name="evt"></param>
-        private void OnRotationSliderChanged(ChangeEvent<float> evt) {
+        /// <param name="changeEvent"></param>
+        private void OnRotationSliderChanged(ChangeEvent<float> changeEvent) {
             Vector3 newRotation = new () {
                 x = xRotationSlider.value,
                 y = yRotationSlider.value,
                 z = zRotationSlider.value,
             };
-            onRotationChanged.Invoke(newRotation);
+            transformController.SetLocalRotation(newRotation);
         }
 
         /// <summary>
         /// Invoked when scale-slider's value is changed
         /// </summary>
         private void OnScaleSliderChanged(ChangeEvent<float> changeEvent) {
-            onScaleChanged.Invoke(changeEvent.newValue);
+            transformController.SetLocalScale(changeEvent.newValue);
         }
 
         /// <summary>
         /// Invoked when position-reset-button is clicked
         /// </summary>
-        private void OnPositionResetClicked() {
+        private void OnPositionResetClicked(ClickEvent evt) {
             SetPositionSliderValues(Vector3.zero);
-            onPositionChanged.Invoke(Vector3.zero);
+            transformController.SetLocalPositionWithConstraints(Vector3.zero);
         }
         
         /// <summary>
         /// Invoked when rotation-reset-button is clicked
         /// </summary>
-        private void OnRotationResetClicked() {
+        private void OnRotationResetClicked(ClickEvent evt) {
             SetRotationSliderValues(Vector3.zero);
-            onRotationChanged.Invoke(Vector3.zero);
+            transformController.SetLocalRotation(Vector3.zero);
         }
         
         /// <summary>
         /// Invoked when scale-reset-button is clicked
         /// </summary>
-        private void OnScaleResetClicked() {
+        private void OnScaleResetClicked(ClickEvent evt) {
             SetScaleSliderValue(1);
-            onScaleChanged.Invoke(1);
+            transformController.SetLocalScale(1);
         }
 
         /// <summary>
@@ -166,6 +192,13 @@ namespace MeshVisualizer.UI {
         /// </summary>
         /// <param name="values"></param>
         public void SetRotationSliderValues(Vector3 values) {
+            if (values.x >= 180)
+                values.x -= 360;
+            if (values.y >= 180)
+                values.y -= 360;
+            if (values.z >= 180)
+                values.z -= 360;
+            
             xRotationSlider.SetValueWithoutNotify(values.x);
             yRotationSlider.SetValueWithoutNotify(values.y);
             zRotationSlider.SetValueWithoutNotify(values.z);
