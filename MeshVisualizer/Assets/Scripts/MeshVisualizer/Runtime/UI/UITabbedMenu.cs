@@ -1,4 +1,5 @@
 using System;
+using MeshVisualizer.Input;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -24,6 +25,8 @@ namespace MeshVisualizer.UI {
         private VisualElement panel { get; set; }
         private Label panelTitle { get; set; }
         
+        private bool previewingPanel { get; set; }
+        
         private void Awake() {
             var document = GetComponent<UIDocument>();
             if (document == null) {
@@ -38,7 +41,8 @@ namespace MeshVisualizer.UI {
                 return;
             }
 
-            root.Q<VisualElement>(screenName).RegisterCallback<ClickEvent>(OnScreenClicked);
+            // root.Q<VisualElement>(screenName).RegisterCallback<ClickEvent>(OnScreenClicked);
+            root.Q<VisualElement>(screenName).RegisterCallback<MouseOverEvent>(OnScreenMouseOver);
 
             panelTitle = root.Q<Label>(panelTitleName);
             if (panelTitle == null) {
@@ -62,7 +66,8 @@ namespace MeshVisualizer.UI {
                         return;
                     }
 
-                    tabButton.RegisterCallback<ClickEvent>(OnTabClicked);
+                    // tabButton.RegisterCallback<ClickEvent>(OnTabClicked);
+                    tabButton.RegisterCallback<MouseOverEvent>(OnTabMouseOver);
                 });
         }
 
@@ -83,6 +88,25 @@ namespace MeshVisualizer.UI {
                 button.RemoveFromClassList(tabSelectedClassName);
             });
         }
+        private void OnScreenMouseOver(MouseOverEvent evt) {
+            if (!previewingPanel || !IsEmptySpace(evt.target)) {
+                return;
+            }
+
+            HideAllContentContainers();
+            
+            //Hide panel
+            panel.style.display = new StyleEnum<DisplayStyle>(DisplayStyle.None);
+            
+            //remove unselect any tabs
+            root
+                .Query<Button>(className: tabSelectedClassName)
+                .ForEach(button => {
+                    button.RemoveFromClassList(tabSelectedClassName);
+                });
+            
+            ScreenInputManager.Enable();
+        }
 
         private bool IsEmptySpace(IEventHandler eventHandler) {
             if (eventHandler is VisualElement element) {
@@ -91,10 +115,21 @@ namespace MeshVisualizer.UI {
             return false;
         }
 
-        private void OnTabClicked(ClickEvent evt) {
+        // private void OnTabClicked(ClickEvent evt) {
+        //     if(evt.currentTarget is Button tab) {
+        //         ToggleTab(tab, false);
+        //         evt.StopPropagation();
+        //     }
+        // }
+        
+        /// <summary>
+        /// Called when a tab is moused over
+        /// </summary>
+        /// <param name="evt"></param>
+        private void OnTabMouseOver(MouseOverEvent evt) {
             if(evt.currentTarget is Button tab) {
-                ToggleTab(tab);
-                evt.StopPropagation();
+                ToggleTab(tab, true);
+                ScreenInputManager.Disable();
             }
         }
 
@@ -103,7 +138,9 @@ namespace MeshVisualizer.UI {
         /// It will also unselect any other tabs currently selected.
         /// </summary>
         /// <param name="tab"></param>
-        private void ToggleTab(Button tab) {
+        /// <param name="preview"></param>
+        private void ToggleTab(Button tab, bool preview) {
+            previewingPanel = preview;
             HideAllContentContainers();
             
             if (IsSelected(tab)) {
@@ -130,6 +167,9 @@ namespace MeshVisualizer.UI {
             }
         }
 
+        /// <summary>
+        /// Hides all content containers on the panel
+        /// </summary>
         private void HideAllContentContainers() {
             root
                 .Query<VisualElement>(className: contentContainerClassName)
