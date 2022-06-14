@@ -13,7 +13,7 @@ namespace MeshVisualizer.UI {
 
         protected string contentContainerName => tabName + "-content-container";
 
-        protected VisualElement contentContainer { get; set; }
+        public VisualElement contentContainer { get; private set; }
 
         protected void Awake() {
             if (panelUxml == null) {
