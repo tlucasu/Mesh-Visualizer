@@ -1,6 +1,6 @@
 using System;
 using System.Collections;
-using MeshVisualizer;
+using MeshVisualizer.Controller;
 using MeshVisualizer.UI;
 using NUnit.Framework;
 using UnityEngine;

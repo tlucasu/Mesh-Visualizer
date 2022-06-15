@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Linq;
-using MeshVisualizer;
+using MeshVisualizer.Controller;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
