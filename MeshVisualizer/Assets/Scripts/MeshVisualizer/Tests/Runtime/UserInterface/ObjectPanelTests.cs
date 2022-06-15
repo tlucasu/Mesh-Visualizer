@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using MeshVisualizer;
 using MeshVisualizer.UI;
@@ -34,56 +35,65 @@ namespace Scene.Main.UserInterface {
         
         [UnityTest]
         public IEnumerator OnClick_ModelPanelItem_ChangesModel() {
-            while (!modelPanel.initialized)
-                yield return null;
-
-            while (assetController.currentModel == null)
-                yield return null;
+            //waiting for the panel to initialize
+            yield return WaitForCondition(() => modelPanel.initialized, 1);
+            //wait for asset controller to finish loading starting asset
+            yield return WaitForCondition(() => assetController.currentModel != null, 1);
             
             GameObject previousModel = assetController.currentModel;
             Button objectItemButton = modelPanel.contentContainer.Q<Button>(className:objectItemClass);
             
             SendClickEvent(objectItemButton);
             
-            yield return new WaitForSecondsRealtime(1);
+            yield return WaitForCondition(() => assetController.currentModel != previousModel, 1);
             
             Assert.AreNotEqual(assetController.currentModel, previousModel);
         }
         
         [UnityTest]
         public IEnumerator OnClick_MaterialPanelItem_ChangesMaterialOnModel() {
-            while (!materialPanel.initialized)
-                yield return null;
-
-            while (assetController.currentMaterial == null)
-                yield return null;
+            //waiting for the panel to initialize
+            yield return WaitForCondition(() => materialPanel.initialized, 1);
+            //wait for asset controller to finish loading starting asset
+            yield return WaitForCondition(() => assetController.currentMaterial != null, 1);
             
             Material previousMaterial = assetController.currentMaterial;
             Button objectItemButton = materialPanel.contentContainer.Q<Button>(className:objectItemClass);
             
             SendClickEvent(objectItemButton);
             
-            yield return new WaitForSecondsRealtime(1);
+            yield return WaitForCondition(() => assetController.currentMaterial != previousMaterial, 1);
             
             Assert.AreNotEqual(assetController.currentMaterial, previousMaterial);
         }
         
         [UnityTest]
         public IEnumerator OnClick_TexturePanelItem_ChangesTextureOnModel() {
-            while (!texturePanel.initialized)
-                yield return null;
-
-            while (assetController.currentTextureMaterial == null)
-                yield return null;
+            //waiting for the panel to initialize
+            yield return WaitForCondition(() => texturePanel.initialized, 1);
+            //wait for asset controller to finish loading starting asset
+            yield return WaitForCondition(() => assetController.currentTextureMaterial != null, 1);
             
             Material previousTextureMaterial = assetController.currentTextureMaterial;
             Button objectItemButton = texturePanel.contentContainer.Q<Button>(className:objectItemClass);
             
             SendClickEvent(objectItemButton);
             
-            yield return new WaitForSecondsRealtime(1);
+            yield return WaitForCondition(() => assetController.currentTextureMaterial != previousTextureMaterial, 1);
             
             Assert.AreNotEqual(assetController.currentTextureMaterial, previousTextureMaterial);
+        }
+        
+        private IEnumerator WaitForCondition(Func<bool> condition, float timeout) {
+            var startTime = Time.timeSinceLevelLoad;
+            while (!condition.Invoke() 
+                   && startTime + timeout > Time.timeSinceLevelLoad) {
+                yield return null;
+            }
+
+            if (startTime + timeout < Time.timeSinceLevelLoad) {
+                throw new TimeoutException();
+            }
         }
     }
 }
