@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.ResourceLocations;
 
-namespace MeshVisualizer {
+namespace MeshVisualizer.Controller {
     /// <summary>
     /// Behaviour attached to the model base that handles switching of the 3D model, material and texture.
     /// Textures are loaded via materials then copied from one material to the other using the materials' texture property names.
@@ -101,6 +101,7 @@ namespace MeshVisualizer {
 
                 GameObject instance = handle.Result;
                 instance.transform.SetParent(this.transform, false);
+                instance.layer = LayerMask.NameToLayer("Model"); //set the objects layer to model to avoid being in the reflection probe
                 SetModel(instance);
             };
         }

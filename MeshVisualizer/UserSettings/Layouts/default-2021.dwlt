@@ -14,17 +14,117 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
+    x: 1749
+    y: -1208
+    width: 495
+    height: 962
+  m_ShowMode: 0
+  m_Title: Lighting
+  m_RootView: {fileID: 5}
+  m_MinSize: {x: 390, y: 411}
+  m_MaxSize: {x: 4000, y: 4021}
+  m_Maximized: 0
+--- !u!114 &2
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PixelRect:
+    serializedVersion: 2
     x: 0
     y: 43
     width: 3440
     height: 1349
   m_ShowMode: 4
-  m_Title: Game
-  m_RootView: {fileID: 10}
+  m_Title: Addressables Groups
+  m_RootView: {fileID: 13}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
---- !u!114 &2
+--- !u!114 &3
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: SceneHierarchyWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 370
+    y: 0
+    width: 427
+    height: 1299
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 25}
+  m_Panes:
+  - {fileID: 25}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &4
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: LightingWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 495
+    height: 962
+  m_MinSize: {x: 390, y: 390}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 17}
+  m_Panes:
+  - {fileID: 17}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &5
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 4}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 495
+    height: 962
+  m_MinSize: {x: 390, y: 411}
+  m_MaxSize: {x: 4000, y: 4021}
+  vertical: 0
+  controlID: 62
+--- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,16 +141,17 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 761
-    height: 617
+    width: 736
+    height: 807
   m_MinSize: {x: 430, y: 250}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 16}
+  m_ActualView: {fileID: 22}
   m_Panes:
-  - {fileID: 16}
+  - {fileID: 22}
+  - {fileID: 19}
   m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &3
+  m_LastSelected: 1
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -63,19 +164,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 2}
-  - {fileID: 5}
+  - {fileID: 6}
+  - {fileID: 9}
   m_Position:
     serializedVersion: 2
-    x: 2679
+    x: 2704
     y: 0
-    width: 761
+    width: 736
     height: 1299
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 145
---- !u!114 &4
+  controlID: 160
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,16 +193,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 400
+    width: 370
     height: 1299
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 18}
+  m_ActualView: {fileID: 24}
   m_Panes:
-  - {fileID: 18}
+  - {fileID: 24}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &5
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,17 +218,17 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 617
-    width: 761
-    height: 682
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 20}
+    y: 807
+    width: 736
+    height: 492
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 26}
   m_Panes:
-  - {fileID: 20}
+  - {fileID: 26}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &6
+--- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,16 +245,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 901
-    width: 1828
+    width: 1907
     height: 398
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 17}
+  m_ActualView: {fileID: 23}
   m_Panes:
-  - {fileID: 17}
+  - {fileID: 23}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &7
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,19 +267,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 14}
-  - {fileID: 6}
+  - {fileID: 16}
+  - {fileID: 10}
   m_Position:
     serializedVersion: 2
-    x: 851
+    x: 797
     y: 0
-    width: 1828
+    width: 1907
     height: 1299
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 60
---- !u!114 &8
+  controlID: 16
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,8 +292,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 13}
+  - {fileID: 8}
   - {fileID: 3}
+  - {fileID: 11}
+  - {fileID: 7}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -202,34 +305,8 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 58
---- !u!114 &9
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 400
-    y: 0
-    width: 451
-    height: 1299
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 19}
-  m_Panes:
-  - {fileID: 19}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &10
+  controlID: 159
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -242,9 +319,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 11}
-  - {fileID: 8}
+  - {fileID: 14}
   - {fileID: 12}
+  - {fileID: 15}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -257,7 +334,7 @@ MonoBehaviour:
   m_TopViewHeight: 30
   m_UseBottomView: 1
   m_BottomViewHeight: 20
---- !u!114 &11
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -279,7 +356,7 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &12
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -300,33 +377,7 @@ MonoBehaviour:
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &13
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 4}
-  - {fileID: 9}
-  - {fileID: 7}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 2679
-    height: 1299
-  m_MinSize: {x: 300, y: 200}
-  m_MaxSize: {x: 24288, y: 16192}
-  vertical: 0
-  controlID: 59
---- !u!114 &14
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -336,24 +387,1076 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: GameView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1828
+    width: 1907
     height: 901
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 15}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 20}
   m_Panes:
-  - {fileID: 15}
   - {fileID: 21}
-  m_Selected: 0
-  m_LastSelected: 1
---- !u!114 &15
+  - {fileID: 20}
+  - {fileID: 18}
+  m_Selected: 1
+  m_LastSelected: 0
+--- !u!114 &17
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12079, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 390, y: 390}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Lighting
+    m_Image: {fileID: -1347227620855488341, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1749
+    y: -1208
+    width: 495
+    height: 941
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+--- !u!114 &18
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13999, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: UI Builder
+    m_Image: {fileID: 8683992553321208622, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 797
+    y: 73
+    width: 1905
+    height: 880
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+--- !u!114 &19
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 2679
+    y: 73
+    width: 760
+    height: 786
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_Spl:
+    ID: 253
+    splitterInitialOffset: 419
+    currentActiveSplitter: -1
+    realSizes:
+    - 351
+    - 365
+    relativeSizes:
+    - 0.49022347
+    - 0.50977653
+    minSizes:
+    - 32
+    - 32
+    maxSizes:
+    - 0
+    - 0
+    lastTotalSize: 716
+    splitSize: 6
+    xOffset: 0
+    m_Version: 1
+    oldRealSizes: 
+    oldMinSizes: 
+    oldMaxSizes: 
+    oldSplitSize: 0
+  m_TestTypeToolbarIndex: 0
+  m_PlayModeTestListGUI:
+    m_Window: {fileID: 19}
+    m_NewResultList:
+    - id: 1005
+      uniqueId: '[MeshVisualizer][suite]'
+      name: MeshVisualizer
+      fullName: MeshVisualizer
+      resultStatus: 2
+      duration: 4.5494018
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1029
+      uniqueId: '[MeshVisualizer.Tests][C:/Users/tlucas/gitlab/Mesh-Visualizer/MeshVisualizer/Library/ScriptAssemblies/MeshVisualizer.Tests.dll][suite]'
+      name: MeshVisualizer.Tests.dll
+      fullName: C:/Users/tlucas/gitlab/Mesh-Visualizer/MeshVisualizer/Library/ScriptAssemblies/MeshVisualizer.Tests.dll
+      resultStatus: 2
+      duration: 4.194096
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[MeshVisualizer][suite]'
+    - id: 1006
+      uniqueId: MeshVisualizer.Tests.dll/[MeshVisualizer.Tests][ModelAssetControllerTests][suite]
+      name: ModelAssetControllerTests
+      fullName: ModelAssetControllerTests
+      resultStatus: 1
+      duration: 1.6429572
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1033
+      parentUniqueId: '[MeshVisualizer.Tests.dll][suite]'
+    - id: 1003
+      uniqueId: MeshVisualizer.Tests.dll/ModelAssetControllerTests/[MeshVisualizer.Tests][ModelAssetControllerTests.SwitchMaterial_LoadsNewMaterial]
+      name: SwitchMaterial_LoadsNewMaterial
+      fullName: ModelAssetControllerTests.SwitchMaterial_LoadsNewMaterial
+      resultStatus: 1
+      duration: 0.975236
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: MeshVisualizer.Tests.dll/[MeshVisualizer.Tests][ModelAssetControllerTests][suite]
+    - id: 1004
+      uniqueId: MeshVisualizer.Tests.dll/ModelAssetControllerTests/[MeshVisualizer.Tests][ModelAssetControllerTests.SwitchMaterial_SwitchesModelsMaterial]
+      name: SwitchMaterial_SwitchesModelsMaterial
+      fullName: ModelAssetControllerTests.SwitchMaterial_SwitchesModelsMaterial
+      resultStatus: 1
+      duration: 0.2267467
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: MeshVisualizer.Tests.dll/[MeshVisualizer.Tests][ModelAssetControllerTests][suite]
+    - id: 1002
+      uniqueId: MeshVisualizer.Tests.dll/ModelAssetControllerTests/[MeshVisualizer.Tests][ModelAssetControllerTests.SwitchModel_LoadsNewModel]
+      name: SwitchModel_LoadsNewModel
+      fullName: ModelAssetControllerTests.SwitchModel_LoadsNewModel
+      resultStatus: 1
+      duration: 0.0055308
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: MeshVisualizer.Tests.dll/[MeshVisualizer.Tests][ModelAssetControllerTests][suite]
+    - id: 1005
+      uniqueId: MeshVisualizer.Tests.dll/ModelAssetControllerTests/[MeshVisualizer.Tests][ModelAssetControllerTests.SwitchTexture_LoadsNewTexture]
+      name: SwitchTexture_LoadsNewTexture
+      fullName: ModelAssetControllerTests.SwitchTexture_LoadsNewTexture
+      resultStatus: 1
+      duration: 0.1206398
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: MeshVisualizer.Tests.dll/[MeshVisualizer.Tests][ModelAssetControllerTests][suite]
+    - id: 1006
+      uniqueId: MeshVisualizer.Tests.dll/ModelAssetControllerTests/[MeshVisualizer.Tests][ModelAssetControllerTests.SwitchTexture_SwitchesModelsTexture]
+      name: SwitchTexture_SwitchesModelsTexture
+      fullName: ModelAssetControllerTests.SwitchTexture_SwitchesModelsTexture
+      resultStatus: 1
+      duration: 0.1133153
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: MeshVisualizer.Tests.dll/[MeshVisualizer.Tests][ModelAssetControllerTests][suite]
+    - id: 1010
+      uniqueId: MeshVisualizer.Tests.dll/[MeshVisualizer.Tests][ModelTransformControllerTests][suite]
+      name: ModelTransformControllerTests
+      fullName: ModelTransformControllerTests
+      resultStatus: 1
+      duration: 0.020639
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1033
+      parentUniqueId: '[MeshVisualizer.Tests.dll][suite]'
+    - id: 1018
+      uniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalPositionWithConstraints][suite]
+      name: SetLocalPositionWithConstraints
+      fullName: ModelTransformControllerTests.SetLocalPositionWithConstraints
+      resultStatus: 1
+      duration: 0.0075607
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1010
+      parentUniqueId: MeshVisualizer.Tests.dll/[MeshVisualizer.Tests][ModelTransformControllerTests][suite]
+    - id: 1011
+      uniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/SetLocalPositionWithConstraints/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalPositionWithConstraints(0,0,0)]
+      name: SetLocalPositionWithConstraints(0,0,0)
+      fullName: ModelTransformControllerTests.SetLocalPositionWithConstraints(0,0,0)
+      resultStatus: 1
+      duration: 0.0042007
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalPositionWithConstraints][suite]
+    - id: 1012
+      uniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/SetLocalPositionWithConstraints/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalPositionWithConstraints(0.2f,0.3f,0.4f)]
+      name: SetLocalPositionWithConstraints(0.2f,0.3f,0.4f)
+      fullName: ModelTransformControllerTests.SetLocalPositionWithConstraints(0.2f,0.3f,0.4f)
+      resultStatus: 1
+      duration: 0.0001588
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalPositionWithConstraints][suite]
+    - id: 1013
+      uniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/SetLocalPositionWithConstraints/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalPositionWithConstraints(-0.2f,0.3f,-0.4f)]
+      name: SetLocalPositionWithConstraints(-0.2f,0.3f,-0.4f)
+      fullName: ModelTransformControllerTests.SetLocalPositionWithConstraints(-0.2f,0.3f,-0.4f)
+      resultStatus: 1
+      duration: 0.0001302
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalPositionWithConstraints][suite]
+    - id: 1014
+      uniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/SetLocalPositionWithConstraints/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalPositionWithConstraints(-41,-10,-15.4f)]
+      name: SetLocalPositionWithConstraints(-41,-10,-15.4f)
+      fullName: ModelTransformControllerTests.SetLocalPositionWithConstraints(-41,-10,-15.4f)
+      resultStatus: 1
+      duration: 0.0001191
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalPositionWithConstraints][suite]
+    - id: 1015
+      uniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/SetLocalPositionWithConstraints/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalPositionWithConstraints(41,10,15.4f)]
+      name: SetLocalPositionWithConstraints(41,10,15.4f)
+      fullName: ModelTransformControllerTests.SetLocalPositionWithConstraints(41,10,15.4f)
+      resultStatus: 1
+      duration: 0.0001185
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalPositionWithConstraints][suite]
+    - id: 1016
+      uniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/SetLocalPositionWithConstraints/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalPositionWithConstraints(1,1,1)]
+      name: SetLocalPositionWithConstraints(1,1,1)
+      fullName: ModelTransformControllerTests.SetLocalPositionWithConstraints(1,1,1)
+      resultStatus: 1
+      duration: 0.0001254
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalPositionWithConstraints][suite]
+    - id: 1017
+      uniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/SetLocalPositionWithConstraints/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalPositionWithConstraints(1.1324f,-1.04f,1.3f)]
+      name: SetLocalPositionWithConstraints(1.1324f,-1.04f,1.3f)
+      fullName: ModelTransformControllerTests.SetLocalPositionWithConstraints(1.1324f,-1.04f,1.3f)
+      resultStatus: 1
+      duration: 0.0001204
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalPositionWithConstraints][suite]
+    - id: 1022
+      uniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalRotation][suite]
+      name: SetLocalRotation
+      fullName: ModelTransformControllerTests.SetLocalRotation
+      resultStatus: 1
+      duration: 0.0047255
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1010
+      parentUniqueId: MeshVisualizer.Tests.dll/[MeshVisualizer.Tests][ModelTransformControllerTests][suite]
+    - id: 1019
+      uniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/SetLocalRotation/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalRotation(0,0,0)]
+      name: SetLocalRotation(0,0,0)
+      fullName: ModelTransformControllerTests.SetLocalRotation(0,0,0)
+      resultStatus: 1
+      duration: 0.0012597
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1022
+      parentUniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalRotation][suite]
+    - id: 1020
+      uniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/SetLocalRotation/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalRotation(-90,90,-90)]
+      name: SetLocalRotation(-90,90,-90)
+      fullName: ModelTransformControllerTests.SetLocalRotation(-90,90,-90)
+      resultStatus: 1
+      duration: 0.0001956
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1022
+      parentUniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalRotation][suite]
+    - id: 1021
+      uniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/SetLocalRotation/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalRotation(90,180,-180)]
+      name: SetLocalRotation(90,180,-180)
+      fullName: ModelTransformControllerTests.SetLocalRotation(90,180,-180)
+      resultStatus: 1
+      duration: 0.0001803
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1022
+      parentUniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalRotation][suite]
+    - id: 1028
+      uniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalScale][suite]
+      name: SetLocalScale
+      fullName: ModelTransformControllerTests.SetLocalScale
+      resultStatus: 1
+      duration: 0.0045267
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1010
+      parentUniqueId: MeshVisualizer.Tests.dll/[MeshVisualizer.Tests][ModelTransformControllerTests][suite]
+    - id: 1023
+      uniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/SetLocalScale/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalScale(0)]
+      name: SetLocalScale(0)
+      fullName: ModelTransformControllerTests.SetLocalScale(0)
+      resultStatus: 1
+      duration: 0.0008456
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1028
+      parentUniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalScale][suite]
+    - id: 1024
+      uniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/SetLocalScale/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalScale(-1)]
+      name: SetLocalScale(-1)
+      fullName: ModelTransformControllerTests.SetLocalScale(-1)
+      resultStatus: 1
+      duration: 0.0001902
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1028
+      parentUniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalScale][suite]
+    - id: 1025
+      uniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/SetLocalScale/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalScale(2)]
+      name: SetLocalScale(2)
+      fullName: ModelTransformControllerTests.SetLocalScale(2)
+      resultStatus: 1
+      duration: 0.0001773
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1028
+      parentUniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalScale][suite]
+    - id: 1026
+      uniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/SetLocalScale/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalScale(2.5f)]
+      name: SetLocalScale(2.5f)
+      fullName: ModelTransformControllerTests.SetLocalScale(2.5f)
+      resultStatus: 1
+      duration: 0.0001709
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1028
+      parentUniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalScale][suite]
+    - id: 1027
+      uniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/SetLocalScale/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalScale(-1023.343f)]
+      name: SetLocalScale(-1023.343f)
+      fullName: ModelTransformControllerTests.SetLocalScale(-1023.343f)
+      resultStatus: 1
+      duration: 0.0002373
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1028
+      parentUniqueId: MeshVisualizer.Tests.dll/ModelTransformControllerTests/[MeshVisualizer.Tests][ModelTransformControllerTests.SetLocalScale][suite]
+    - id: 1035
+      uniqueId: MeshVisualizer.Tests.dll/[Scene][suite]
+      name: Scene
+      fullName: Scene
+      resultStatus: 2
+      duration: 4.178168
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1034
+      parentUniqueId: '[MeshVisualizer.Tests][C:/Users/tlucas/gitlab/Mesh-Visualizer/MeshVisualizer/Library/ScriptAssemblies/MeshVisualizer.Tests.dll][suite]'
+    - id: 1036
+      uniqueId: MeshVisualizer.Tests.dll/Scene/[Main][suite]
+      name: Main
+      fullName: Scene.Main
+      resultStatus: 2
+      duration: 4.176192
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1035
+      parentUniqueId: MeshVisualizer.Tests.dll/[Scene][suite]
+    - id: 1037
+      uniqueId: MeshVisualizer.Tests.dll/Scene/Main/[MeshVisualizer.Tests][Scene.Main.UserInterface][suite]
+      name: UserInterface
+      fullName: Scene.Main.UserInterface
+      resultStatus: 2
+      duration: 4.174745
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1036
+      parentUniqueId: MeshVisualizer.Tests.dll/Scene/[Main][suite]
+    - id: 1024
+      uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/[MeshVisualizer.Tests][Scene.Main.UserInterface.ObjectPanelTests][suite]
+      name: ObjectPanelTests
+      fullName: Scene.Main.UserInterface.ObjectPanelTests
+      resultStatus: 2
+      duration: 4.172069
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1040
+      parentUniqueId: MeshVisualizer.Tests.dll/Scene/Main/[MeshVisualizer.Tests][Scene.Main.UserInterface][suite]
+    - id: 1026
+      uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/ObjectPanelTests/[MeshVisualizer.Tests][Scene.Main.UserInterface.ObjectPanelTests.OnClick_MaterialPanelItem_ChangesMaterialOnModel]
+      name: OnClick_MaterialPanelItem_ChangesMaterialOnModel
+      fullName: Scene.Main.UserInterface.ObjectPanelTests.OnClick_MaterialPanelItem_ChangesMaterialOnModel
+      resultStatus: 2
+      duration: 2.581593
+      messages: 'System.TimeoutException : The operation has timed out.'
+      output: 
+      stacktrace: "  at Scene.Main.UserInterface.ObjectPanelTests+<WaitForCondition>d__21.MoveNext
+        () [0x00070] in C:\\Users\\tlucas\\gitlab\\Mesh-Visualizer\\MeshVisualizer\\Assets\\Scripts\\MeshVisualizer\\Tests\\Runtime\\UserInterface\\ObjectPanelTests.cs:95
+        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+        in C:\\Users\\tlucas\\gitlab\\Mesh-Visualizer\\MeshVisualizer\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/[MeshVisualizer.Tests][Scene.Main.UserInterface.ObjectPanelTests][suite]
+    - id: 1025
+      uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/ObjectPanelTests/[MeshVisualizer.Tests][Scene.Main.UserInterface.ObjectPanelTests.OnClick_ModelPanelItem_ChangesModel]
+      name: OnClick_ModelPanelItem_ChangesModel
+      fullName: Scene.Main.UserInterface.ObjectPanelTests.OnClick_ModelPanelItem_ChangesModel
+      resultStatus: 1
+      duration: 0.3128764
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/[MeshVisualizer.Tests][Scene.Main.UserInterface.ObjectPanelTests][suite]
+    - id: 1027
+      uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/ObjectPanelTests/[MeshVisualizer.Tests][Scene.Main.UserInterface.ObjectPanelTests.OnClick_TexturePanelItem_ChangesTextureOnModel]
+      name: OnClick_TexturePanelItem_ChangesTextureOnModel
+      fullName: Scene.Main.UserInterface.ObjectPanelTests.OnClick_TexturePanelItem_ChangesTextureOnModel
+      resultStatus: 2
+      duration: 1.0666227
+      messages: 'System.TimeoutException : The operation has timed out.'
+      output: 
+      stacktrace: "  at Scene.Main.UserInterface.ObjectPanelTests+<WaitForCondition>d__21.MoveNext
+        () [0x00070] in C:\\Users\\tlucas\\gitlab\\Mesh-Visualizer\\MeshVisualizer\\Assets\\Scripts\\MeshVisualizer\\Tests\\Runtime\\UserInterface\\ObjectPanelTests.cs:95
+        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+        in C:\\Users\\tlucas\\gitlab\\Mesh-Visualizer\\MeshVisualizer\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/[MeshVisualizer.Tests][Scene.Main.UserInterface.ObjectPanelTests][suite]
+    - id: 1024
+      uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/[MeshVisualizer.Tests][Scene.Main.UserInterface.TabbedMenuTests][suite]
+      name: TabbedMenuTests
+      fullName: Scene.Main.UserInterface.TabbedMenuTests
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1037
+      parentUniqueId: MeshVisualizer.Tests.dll/Scene/Main/[MeshVisualizer.Tests][Scene.Main.UserInterface][suite]
+    - id: 1027
+      uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/TabbedMenuTests/[MeshVisualizer.Tests][Scene.Main.UserInterface.TabbedMenuTests.MouseOver_Screen_HidesPanel]
+      name: MouseOver_Screen_HidesPanel
+      fullName: Scene.Main.UserInterface.TabbedMenuTests.MouseOver_Screen_HidesPanel
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/[MeshVisualizer.Tests][Scene.Main.UserInterface.TabbedMenuTests][suite]
+    - id: 1028
+      uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/TabbedMenuTests/[MeshVisualizer.Tests][Scene.Main.UserInterface.TabbedMenuTests.MouseOver_Spacer_HidesPanel]
+      name: MouseOver_Spacer_HidesPanel
+      fullName: Scene.Main.UserInterface.TabbedMenuTests.MouseOver_Spacer_HidesPanel
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/[MeshVisualizer.Tests][Scene.Main.UserInterface.TabbedMenuTests][suite]
+    - id: 1025
+      uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/TabbedMenuTests/[MeshVisualizer.Tests][Scene.Main.UserInterface.TabbedMenuTests.MouseOver_Tab_DisplaysContent]
+      name: MouseOver_Tab_DisplaysContent
+      fullName: Scene.Main.UserInterface.TabbedMenuTests.MouseOver_Tab_DisplaysContent
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/[MeshVisualizer.Tests][Scene.Main.UserInterface.TabbedMenuTests][suite]
+    - id: 1026
+      uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/TabbedMenuTests/[MeshVisualizer.Tests][Scene.Main.UserInterface.TabbedMenuTests.MouseOver_Tab_DisplaysPanel]
+      name: MouseOver_Tab_DisplaysPanel
+      fullName: Scene.Main.UserInterface.TabbedMenuTests.MouseOver_Tab_DisplaysPanel
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/[MeshVisualizer.Tests][Scene.Main.UserInterface.TabbedMenuTests][suite]
+    - id: 1029
+      uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/[MeshVisualizer.Tests][Scene.Main.UserInterface.TransformPanelTests][suite]
+      name: TransformPanelTests
+      fullName: Scene.Main.UserInterface.TransformPanelTests
+      resultStatus: 0
+      duration: 1.4081305
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1037
+      parentUniqueId: MeshVisualizer.Tests.dll/Scene/Main/[MeshVisualizer.Tests][Scene.Main.UserInterface][suite]
+    - id: 1031
+      uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/TransformPanelTests/[MeshVisualizer.Tests][Scene.Main.UserInterface.TransformPanelTests.OnClick_PositionResetButton_ResetsModelPosition]
+      name: OnClick_PositionResetButton_ResetsModelPosition
+      fullName: Scene.Main.UserInterface.TransformPanelTests.OnClick_PositionResetButton_ResetsModelPosition
+      resultStatus: 0
+      duration: 0.7094875
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/[MeshVisualizer.Tests][Scene.Main.UserInterface.TransformPanelTests][suite]
+    - id: 1032
+      uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/TransformPanelTests/[MeshVisualizer.Tests][Scene.Main.UserInterface.TransformPanelTests.OnClick_RotationResetButton_ResetsModelRotation]
+      name: OnClick_RotationResetButton_ResetsModelRotation
+      fullName: Scene.Main.UserInterface.TransformPanelTests.OnClick_RotationResetButton_ResetsModelRotation
+      resultStatus: 0
+      duration: 0.2835785
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/[MeshVisualizer.Tests][Scene.Main.UserInterface.TransformPanelTests][suite]
+    - id: 1033
+      uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/TransformPanelTests/[MeshVisualizer.Tests][Scene.Main.UserInterface.TransformPanelTests.OnClick_ScaleResetButton_ResetsModelScale]
+      name: OnClick_ScaleResetButton_ResetsModelScale
+      fullName: Scene.Main.UserInterface.TransformPanelTests.OnClick_ScaleResetButton_ResetsModelScale
+      resultStatus: 0
+      duration: 0.0754329
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/[MeshVisualizer.Tests][Scene.Main.UserInterface.TransformPanelTests][suite]
+    - id: 1030
+      uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/TransformPanelTests/[MeshVisualizer.Tests][Scene.Main.UserInterface.TransformPanelTests.OnDisplay_Sliders_UpdateValues]
+      name: OnDisplay_Sliders_UpdateValues
+      fullName: Scene.Main.UserInterface.TransformPanelTests.OnDisplay_Sliders_UpdateValues
+      resultStatus: 0
+      duration: 0.131121
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/[MeshVisualizer.Tests][Scene.Main.UserInterface.TransformPanelTests][suite]
+    - id: 1031
+      uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/TransformPanelTests/[MeshVisualizer.Tests][Scene.Main.UserInterface.TransformPanelTests.OnValueChange_Sliders_UpdateTargetTransform]
+      name: OnValueChange_Sliders_UpdateTargetTransform
+      fullName: Scene.Main.UserInterface.TransformPanelTests.OnValueChange_Sliders_UpdateTargetTransform
+      resultStatus: 0
+      duration: 0.0660278
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/[MeshVisualizer.Tests][Scene.Main.UserInterface.TransformPanelTests][suite]
+    m_ResultText: 'ObjectPanelTests (4.172s)
+
+      ---
+
+      One or more child
+      tests had errors'
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 133}
+      m_SelectedIDs: 12fec225
+      m_LastClickedID: 633536018
+      m_ExpandedIDs: 0e8aa3898d8ec9a1c9887da5acdf10cd2ee7b7d3c1fb00f798cb05fa69a38dfeab0a3a052748282212fec22581cbf633bd403d39d3d7284e216976585f835559cc2abd5bfb8d346cffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+    m_SelectedOption: 0
+  m_EditModeTestListGUI:
+    m_Window: {fileID: 19}
+    m_NewResultList:
+    - id: 1000
+      uniqueId: '[MeshVisualizer][suite]'
+      name: MeshVisualizer
+      fullName: MeshVisualizer
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    m_ResultText: 
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 81cbf633ffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+--- !u!114 &20
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Game
+    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 797
+    y: 73
+    width: 1905
+    height: 880
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_SerializedViewNames: []
+  m_SerializedViewValues: []
+  m_PlayModeViewName: GameView
+  m_ShowGizmos: 0
+  m_TargetDisplay: 0
+  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+  m_TargetSize: {x: 1905, y: 859}
+  m_TextureFilterMode: 0
+  m_TextureHideFlags: 61
+  m_RenderIMGUI: 1
+  m_EnterPlayModeBehavior: 0
+  m_UseMipMap: 0
+  m_VSyncEnabled: 0
+  m_Gizmos: 0
+  m_Stats: 1
+  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_ZoomArea:
+    m_HRangeLocked: 0
+    m_VRangeLocked: 0
+    hZoomLockedByDefault: 0
+    vZoomLockedByDefault: 0
+    m_HBaseRangeMin: -952.5
+    m_HBaseRangeMax: 952.5
+    m_VBaseRangeMin: -429.5
+    m_VBaseRangeMax: 429.5
+    m_HAllowExceedBaseRangeMin: 1
+    m_HAllowExceedBaseRangeMax: 1
+    m_VAllowExceedBaseRangeMin: 1
+    m_VAllowExceedBaseRangeMax: 1
+    m_ScaleWithWindow: 0
+    m_HSlider: 0
+    m_VSlider: 0
+    m_IgnoreScrollWheelUntilClicked: 0
+    m_EnableMouseInput: 1
+    m_EnableSliderZoomHorizontal: 0
+    m_EnableSliderZoomVertical: 0
+    m_UniformScale: 1
+    m_UpDirection: 1
+    m_DrawArea:
+      serializedVersion: 2
+      x: 0
+      y: 21
+      width: 1905
+      height: 859
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 952.5, y: 429.5}
+    m_MarginLeft: 0
+    m_MarginRight: 0
+    m_MarginTop: 0
+    m_MarginBottom: 0
+    m_LastShownAreaInsideMargins:
+      serializedVersion: 2
+      x: -952.5
+      y: -429.5
+      width: 1905
+      height: 859
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 1905, y: 880}
+  m_ClearInEditMode: 1
+  m_NoCameraWarning: 1
+  m_LowResolutionForAspectRatios: 01000000000000000000
+  m_XRRenderMode: 0
+  m_RenderTexture: {fileID: 0}
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -373,9 +1476,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 851
+    x: 797
     y: 73
-    width: 1826
+    width: 1905
     height: 880
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -600,9 +1703,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.5678835, y: -7.6243286, z: 12.726879}
+    m_Target: {x: 0, y: 3, z: -3}
     speed: 2
-    m_Value: {x: 1.5678835, y: -7.6243286, z: 12.726879}
+    m_Value: {x: 0, y: 3, z: -3}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -649,13 +1752,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.2661529, y: 0.07796934, z: -0.021607047, w: 0.9605261}
+    m_Target: {x: 0.10244779, y: 0.66956395, z: -0.09401476, w: 0.72962344}
     speed: 2
-    m_Value: {x: 0.26615372, y: 0.07796958, z: -0.021607114, w: 0.9605291}
+    m_Value: {x: 0.10244777, y: 0.6695638, z: -0.094014734, w: 0.72962326}
   m_Size:
-    m_Target: 8.8650675
+    m_Target: 10
     speed: 2
-    m_Value: 8.8650675
+    m_Value: 10
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -680,7 +1783,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &16
+--- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -700,10 +1803,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2679
+    x: 2704
     y: 73
-    width: 760
-    height: 596
+    width: 735
+    height: 786
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -711,9 +1814,9 @@ MonoBehaviour:
   m_GroupEditor:
     m_TreeState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 08b923d86b4e323af0d40659a9e12164
+      m_SelectedIDs: 8d5630c9
+      m_LastClickedID: -919578995
+      m_ExpandedIDs: 873dce8408b923d8bcb45fefffffffff6b4e323af0d40659a9e12164
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -729,11 +1832,11 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 2}
+        m_ClientGUIView: {fileID: 6}
       m_SearchString: 
     m_Mchs:
       m_Columns:
-      - width: 330.70175
+      - width: 319.2983
         sortedAscending: 0
         headerContent:
           m_Text: Group Name \ Addressable Name
@@ -763,7 +1866,7 @@ MonoBehaviour:
         allowToggleVisibility: 1
         canSort: 0
         userData: 0
-      - width: 190.78937
+      - width: 184.21045
         sortedAscending: 0
         headerContent:
           m_Text: Path
@@ -778,7 +1881,7 @@ MonoBehaviour:
         allowToggleVisibility: 1
         canSort: 1
         userData: 0
-      - width: 203.50882
+      - width: 196.49129
         sortedAscending: 0
         headerContent:
           m_Text: Labels
@@ -795,9 +1898,9 @@ MonoBehaviour:
         userData: 0
       m_VisibleColumns: 00000000010000000200000003000000
       m_SortedColumns: 
-    window: {fileID: 16}
-    m_VerticalSplitterPercent: 0.8
---- !u!114 &17
+    window: {fileID: 22}
+    m_VerticalSplitterPercent: 0.802799
+--- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -817,9 +1920,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 851
+    x: 797
     y: 974
-    width: 1826
+    width: 1905
     height: 377
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -838,22 +1941,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/StreamingAssets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/StreamingAssets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\tlucas\gitlab\Mesh-Visualizer\MeshVisualizer
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 84720000
-    m_LastClickedID: 29316
-    m_ExpandedIDs: 00000000b8700000ba700000bc700000be700000c0700000c2700000c4700000c6700000c8700000ca700000cc700000ce700000d0700000d2700000d4700000d6700000d8700000da700000dc700000de70000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 84940000
+    m_LastClickedID: 38020
+    m_ExpandedIDs: 00000000827100008471000086710000887100008e71000090710000927100009471000096710000987100009a7100009c7100009e710000a0710000a2710000a4710000aa710000ac710000367300003e730000727700007677000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -869,7 +1972,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 6}
+      m_ClientGUIView: {fileID: 10}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -881,7 +1984,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b8700000ba700000bc700000be700000c0700000c2700000c4700000c6700000c8700000ca700000cc700000ce700000d0700000d2700000d4700000d6700000d8700000da700000dc700000de700000
+    m_ExpandedIDs: 00000000827100008471000086710000887100008a7100008c7100008e71000090710000927100009471000096710000987100009a7100009c7100009e710000a0710000a2710000a4710000a6710000a8710000aa710000ac710000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -908,7 +2011,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000000000000e8900000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -925,7 +2028,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 6}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -937,7 +2040,7 @@ MonoBehaviour:
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
---- !u!114 &18
+--- !u!114 &24
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -959,7 +2062,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 399
+    width: 369
     height: 1278
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -978,7 +2081,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &19
+--- !u!114 &25
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -998,9 +2101,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 400
+    x: 370
     y: 73
-    width: 449
+    width: 425
     height: 1278
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1009,9 +2112,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d46f0000
-      m_LastClickedID: 28628
-      m_ExpandedIDs: 2afbfffff46f0000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: aa17feff4018feff561afeff7248ffff2475ffff2afbffff1870000020700000347000003c70000042700000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1027,7 +2130,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 9}
+        m_ClientGUIView: {fileID: 3}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -1035,7 +2138,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &20
+--- !u!114 &26
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1055,105 +2158,11 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2679
-    y: 690
-    width: 760
-    height: 661
+    x: 2704
+    y: 880
+    width: 735
+    height: 471
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &21
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Game
-    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 851
-    y: 73
-    width: 1826
-    height: 880
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_SerializedViewNames:
-  - UnityEditor.DeviceSimulation.SimulatorWindow
-  m_SerializedViewValues:
-  - C:\Users\tlucas\gitlab\Mesh-Visualizer\MeshVisualizer\Library\PlayModeViewStates\c04736a287865534cabba97d3f77a0e3
-  m_PlayModeViewName: GameView
-  m_ShowGizmos: 1
-  m_TargetDisplay: 0
-  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1826, y: 859}
-  m_TextureFilterMode: 0
-  m_TextureHideFlags: 61
-  m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 0
-  m_UseMipMap: 0
-  m_VSyncEnabled: 0
-  m_Gizmos: 1
-  m_Stats: 1
-  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-  m_ZoomArea:
-    m_HRangeLocked: 0
-    m_VRangeLocked: 0
-    hZoomLockedByDefault: 0
-    vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -913
-    m_HBaseRangeMax: 913
-    m_VBaseRangeMin: -429.5
-    m_VBaseRangeMax: 429.5
-    m_HAllowExceedBaseRangeMin: 1
-    m_HAllowExceedBaseRangeMax: 1
-    m_VAllowExceedBaseRangeMin: 1
-    m_VAllowExceedBaseRangeMax: 1
-    m_ScaleWithWindow: 0
-    m_HSlider: 0
-    m_VSlider: 0
-    m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
-    m_EnableSliderZoomHorizontal: 0
-    m_EnableSliderZoomVertical: 0
-    m_UniformScale: 1
-    m_UpDirection: 1
-    m_DrawArea:
-      serializedVersion: 2
-      x: 0
-      y: 21
-      width: 1826
-      height: 859
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 913, y: 429.5}
-    m_MarginLeft: 0
-    m_MarginRight: 0
-    m_MarginTop: 0
-    m_MarginBottom: 0
-    m_LastShownAreaInsideMargins:
-      serializedVersion: 2
-      x: -913
-      y: -429.5
-      width: 1826
-      height: 859
-    m_MinimalGUI: 1
-  m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1826, y: 880}
-  m_ClearInEditMode: 1
-  m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 01000000000000000000
-  m_XRRenderMode: 0
-  m_RenderTexture: {fileID: 0}
