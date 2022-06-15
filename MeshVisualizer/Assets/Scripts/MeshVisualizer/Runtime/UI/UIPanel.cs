@@ -3,6 +3,9 @@ using UnityEngine.UIElements;
 
 namespace MeshVisualizer.UI {
     public abstract class UIPanel : MonoBehaviour {
+        protected const string panelButtonClassName = "panel-button";
+        protected const string selectedPanelButtonClassName = "selected-panel-button";
+        
         [Header("UI Properties")]
         [SerializeField]
         protected VisualTreeAsset panelUxml;

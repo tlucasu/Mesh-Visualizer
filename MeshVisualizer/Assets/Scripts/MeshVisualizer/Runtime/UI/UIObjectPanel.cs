@@ -10,8 +10,6 @@ using UnityEngine.UIElements;
 namespace MeshVisualizer.UI {
     public class UIObjectPanel : UIPanel {
         private const string objectContainerName = "object-container";
-        private const string objectItemClass = "object-item";
-        private const string selectedObjectItemClass = "selected-object-item";
         
         [SerializeField] 
         private AssetLabelReference assetLabel;
@@ -65,7 +63,7 @@ namespace MeshVisualizer.UI {
                     name = $"{key}-button",
                     text = key
                 };
-                itemButton.AddToClassList(objectItemClass);
+                itemButton.AddToClassList(panelButtonClassName);
 
                 itemButton.RegisterCallback<ClickEvent>(ItemClicked);
 
@@ -89,9 +87,9 @@ namespace MeshVisualizer.UI {
 
         private void SelectItem(VisualElement itemElement) {
             if(lastSelectedItem != null)
-                lastSelectedItem.RemoveFromClassList(selectedObjectItemClass);
+                lastSelectedItem.RemoveFromClassList(selectedPanelButtonClassName);
             
-            itemElement.AddToClassList(selectedObjectItemClass);
+            itemElement.AddToClassList(selectedPanelButtonClassName);
             lastSelectedItem = itemElement;
         }
     }
