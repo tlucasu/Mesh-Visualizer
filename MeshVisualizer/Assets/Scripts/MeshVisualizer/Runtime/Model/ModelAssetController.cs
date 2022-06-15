@@ -1,10 +1,13 @@
-using System;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.ResourceLocations;
 
 namespace MeshVisualizer {
+    /// <summary>
+    /// Behaviour attached to the model base that handles switching of the 3D model, material and texture.
+    /// Textures are loaded via materials then copied from one material to the other using the materials' texture property names.
+    /// </summary>
     public class ModelAssetController : MonoBehaviour {
 
         [SerializeField]
@@ -20,21 +23,37 @@ namespace MeshVisualizer {
         private AssetReference startingTexture;
         
         private string currentModelAssetKey { get; set; }
+        /// <summary>
+        /// Reference to the current model loaded that is loaded
+        /// </summary>
         public GameObject currentModel { get; private set; }
         private MeshRenderer modelMeshRenderer { get; set; }
         
         
         private string currentMaterialAssetKey { get; set; }
+        /// <summary>
+        /// Reference to an instance of the current material that is loaded
+        /// </summary>
         public Material currentMaterial { get;  private set; }
         
         
         private string currentTextureAssetKey { get; set; }
+        /// <summary>
+        /// Reference to the current 'texture' material that is loaded
+        /// </summary>
         public Material currentTextureMaterial { get; private set; }
+        
+        /// <summary>
+        /// Reference to the current main texture that used on the model
+        /// </summary>
+        public Texture currentTexture { get; private set; }
 
         private bool destroyed { get; set; } = false;
 
         private void Awake() {
+            //Loading in the same manner that UIObjectPanel sends keys to be consistent
             if (startingModel != null && startingModel.RuntimeKeyIsValid()) {
+                //Load starting model
                 Addressables.LoadResourceLocationsAsync(startingModel).Completed += handle => {
                     IResourceLocation resourceLocation = handle.Result.First();
                     SwitchModel(resourceLocation.PrimaryKey);
@@ -43,6 +62,7 @@ namespace MeshVisualizer {
             }
 
             if (startingMaterial != null && startingMaterial.RuntimeKeyIsValid()) {
+                //Load starting material
                 Addressables.LoadResourceLocationsAsync(startingMaterial).Completed += handle => {
                     IResourceLocation resourceLocation = handle.Result.First();
                     SwitchMaterial(resourceLocation.PrimaryKey);
@@ -51,6 +71,7 @@ namespace MeshVisualizer {
             }
 
             if (startingTexture != null && startingTexture.RuntimeKeyIsValid()) {
+                //Load starting texture
                 Addressables.LoadResourceLocationsAsync(startingTexture).Completed += handle => {
                     IResourceLocation resourceLocation = handle.Result.First();
                     SwitchTexture(resourceLocation.PrimaryKey);
@@ -64,12 +85,15 @@ namespace MeshVisualizer {
         }
 
 
-        public void SwitchModel(string assetKey) {
-            if (currentModelAssetKey == assetKey)
+        /// <summary>
+        /// Switches the model to an instance of the model loaded with the addressable address key
+        /// </summary>
+        public void SwitchModel(string addressableAddressKey) {
+            if (currentModelAssetKey == addressableAddressKey)
                 return;
             
-            currentModelAssetKey = assetKey;
-            Addressables.InstantiateAsync(assetKey).Completed += handle => {
+            currentModelAssetKey = addressableAddressKey;
+            Addressables.InstantiateAsync(addressableAddressKey).Completed += handle => {
                 if (destroyed) {
                     Addressables.Release(handle);
                     return;
@@ -81,38 +105,50 @@ namespace MeshVisualizer {
             };
         }
 
-        public void SwitchMaterial(string assetKey) {
-            if (currentMaterialAssetKey == assetKey)
+        /// <summary>
+        /// Switches the model's material to an instance of the material loaded with the addressable address key 
+        /// </summary>
+        public void SwitchMaterial(string addressableAddressKey) {
+            if (currentMaterialAssetKey == addressableAddressKey)
                 return;
 
-            currentMaterialAssetKey = assetKey;
-            Addressables.LoadAssetAsync<Material>(assetKey).Completed += handle => {
+            currentMaterialAssetKey = addressableAddressKey;
+            Addressables.LoadAssetAsync<Material>(addressableAddressKey).Completed += handle => {
                 if (destroyed) {
                     Addressables.Release(handle);
                     return;
                 }
                 
                 Material instance = Instantiate(handle.Result);
-                SetMaterial(instance);
+                SetModelMaterial(instance);
                 Addressables.ReleaseInstance(handle);
             };
         }
 
-        public void SwitchTexture(string assetKey) {
-            if (currentTextureAssetKey == assetKey)
+        /// <summary>
+        /// Switches model's texture to the texture loaded with the addressable address key
+        /// </summary>
+        public void SwitchTexture(string addressableAddressKey) {
+            if (currentTextureAssetKey == addressableAddressKey)
                 return;
 
-            currentTextureAssetKey = assetKey;
-            Addressables.LoadAssetAsync<Material>(assetKey).Completed += handle => {
+            currentTextureAssetKey = addressableAddressKey;
+            Addressables.LoadAssetAsync<Object>(addressableAddressKey).Completed += handle => {
                 if (destroyed) {
                     Addressables.Release(handle);
                     return;
                 }
                 
-                SetTexture(handle.Result);
+                if(handle.Result is Material material)
+                    SetModelTexture(material);
+                else if(handle.Result is Texture texture)
+                    SetModelTexture(texture);
             };
         }
         
+        /// <summary>
+        /// Sets the model
+        /// </summary>
         private void SetModel(GameObject model) {
             if (currentModel != null) {
                 Addressables.ReleaseInstance(currentModel);
@@ -125,10 +161,13 @@ namespace MeshVisualizer {
                 return;
 
             modelMeshRenderer = model.GetComponent<MeshRenderer>();
-            SetMaterial(currentMaterial);
+            SetModelMaterial(currentMaterial);
         }
-
-        private void SetMaterial(Material material) {
+        
+        /// <summary>
+        /// Sets the material of the model
+        /// </summary>
+        private void SetModelMaterial(Material material) {
             if (material != currentMaterial && currentMaterial != null) {
                 DestroyImmediate(currentMaterial);
             }
@@ -140,37 +179,79 @@ namespace MeshVisualizer {
 
             modelMeshRenderer.material = material;
             
-            SetTexture(currentTextureMaterial);
+            if(currentTextureMaterial != null)
+                SetModelTexture(currentTextureMaterial);
+            else
+                SetModelTexture(currentTexture);
         }
 
-        private void SetTexture(Material textureMaterial) {
-            if (textureMaterial != currentTextureMaterial && currentTextureMaterial != null) {
+        /// <summary>
+        /// Sets the texture on the model's material by copying the textures from the source material
+        /// </summary>
+        private void SetModelTexture(Material source) {
+            if (currentTexture != null) {
+                Addressables.Release(currentTexture);
+                currentTexture = null;
+            }
+            
+            if (source != currentTextureMaterial && currentTextureMaterial != null) {
                 Addressables.Release(currentTextureMaterial);
             }
             
-            ClearTextures();
+            ClearTextures(currentMaterial);
+            
+            currentTextureMaterial = source;
+            
+            CopyTextures(source, currentMaterial);
+        }
+        
+        /// <summary>
+        /// Sets the texture on the model's material by copying the textures from the source texture
+        /// </summary>
+        private void SetModelTexture(Texture texture) {
+            if (currentTextureMaterial != null) {
+                Addressables.Release(currentTextureMaterial);
+                currentTextureMaterial = null;
+            }
 
-            currentTextureMaterial = textureMaterial;
+            if (currentTexture != null) {
+                Addressables.Release(currentTexture);
+            }
+            
+            ClearTextures(currentMaterial);
+            
+            currentTexture = texture;
 
-            if (currentMaterial == null || textureMaterial == null)
+            if(currentMaterial != null)
+                currentMaterial.mainTexture = texture;
+        }
+
+        /// <summary>
+        /// Copies all textures from the source material to the destination material, provided they have the same property name.
+        /// </summary>
+        private void CopyTextures(Material source, Material destination) {
+            if (source == null || destination == null)
                 return;
-
-            string[] textureProperties = textureMaterial.GetTexturePropertyNames();
-            foreach (var textureProperty in textureProperties) {
-                if (currentMaterial.HasTexture(textureProperty)) {
-                    Texture texture = textureMaterial.GetTexture(textureProperty);
-                    currentMaterial.SetTexture(textureProperty, texture);
+            
+            string[] propertyNames = source.GetTexturePropertyNames();
+            foreach (var propertyName in propertyNames) {
+                if (destination.HasTexture(propertyName)) {
+                    Texture texture = source.GetTexture(propertyName);
+                    destination.SetTexture(propertyName, texture);
                 }
             }
         }
 
-        private void ClearTextures() {
-            if (currentMaterial == null)
+        /// <summary>
+        /// Sets all textures on the material to null
+        /// </summary>
+        private void ClearTextures(Material material) {
+            if (material == null)
                 return;
             
-            string[] textureProperties = currentMaterial.GetTexturePropertyNames();
+            string[] textureProperties = material.GetTexturePropertyNames();
             foreach (var textureProperty in textureProperties) {
-                currentMaterial.SetTexture(textureProperty, null);
+                material.SetTexture(textureProperty, null);
             }
         }
     }
