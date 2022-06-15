@@ -18,7 +18,7 @@ MonoBehaviour:
   m_GUID: f731d07c34b5be6499c3dc59b6e6788f
   m_SerializeEntries:
   - m_GUID: 101ca5ff4f4b6d241bd4a643c2cc406f
-    m_Address: Donut
+    m_Address: Donut (Low Poly)
     m_ReadOnly: 0
     m_SerializedLabels:
     - Model
@@ -73,7 +73,7 @@ MonoBehaviour:
     m_SerializedLabels:
     - Material
   - m_GUID: e753f27970c6b86489ad54cfb8611387
-    m_Address: Glow Material
+    m_Address: Green Glow Material
     m_ReadOnly: 0
     m_SerializedLabels:
     - Material
@@ -83,7 +83,7 @@ MonoBehaviour:
     m_SerializedLabels:
     - Material
   - m_GUID: b5e307b958f45a9458c8d08411570e12
-    m_Address: Concrete
+    m_Address: Concrete Texture
     m_ReadOnly: 0
     m_SerializedLabels:
     - Texture
@@ -93,15 +93,30 @@ MonoBehaviour:
     m_SerializedLabels:
     - Texture
   - m_GUID: ade8f915c5861fd44b2f78960c3bec95
-    m_Address: Metal
+    m_Address: Metal Texture
     m_ReadOnly: 0
     m_SerializedLabels:
     - Texture
   - m_GUID: 7140a9bc83a12ea49a081dda89216fff
-    m_Address: Wood
+    m_Address: Wood Texture
     m_ReadOnly: 0
     m_SerializedLabels:
     - Texture
+  - m_GUID: 28fd0a4e405454d44b783fe939069ea1
+    m_Address: Donut (High Poly)
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Model
+  - m_GUID: cc0560f18a2321746af4543e8429a3a9
+    m_Address: Mirror Material
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Material
+  - m_GUID: 22dd1cbc25cd2fb408f4a3cf43ce8110
+    m_Address: Red Material
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Material
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 67cef809088f8dd4e934a570c16e54ad, type: 2}
   m_SchemaSet:

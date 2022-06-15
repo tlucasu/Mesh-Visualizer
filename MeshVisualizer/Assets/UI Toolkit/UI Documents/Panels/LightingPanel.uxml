@@ -1,0 +1,21 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/UI%20Documents/TabbedMenu.uss?fileID=7433441132597879392&amp;guid=cc16ee631e6d120439e3ee6c4438b43b&amp;type=3#TabbedMenu" />
+    <Style src="project://database/Assets/UI%20Toolkit/UI%20Documents/Panels/CameraPanel.uss?fileID=7433441132597879392&amp;guid=96914572f100d704a936abf55fa41a3e&amp;type=3#CameraPanel" />
+    <ui:VisualElement name="skybox-subtitle" class="subtitle-container">
+        <ui:Label text="Skybox" display-tooltip-when-elided="true" class="subtitle" />
+    </ui:VisualElement>
+    <ui:VisualElement name="skybox-container">
+        <ui:Button text="Default" display-tooltip-when-elided="true" name="default-skybox-button" class="panel-button selected-panel-button" />
+        <ui:Button text="Dark" display-tooltip-when-elided="true" name="dark-skybox-button" class="toggle-button panel-button" />
+        <ui:Button text="None" display-tooltip-when-elided="true" name="no-skybox-button" class="toggle-button panel-button" />
+    </ui:VisualElement>
+    <ui:VisualElement name="additional-light-subtitle" class="subtitle-container">
+        <ui:Label text="Additional Lights" display-tooltip-when-elided="true" class="subtitle" />
+    </ui:VisualElement>
+    <ui:VisualElement name="additional-light-container">
+        <ui:Button text="Button" display-tooltip-when-elided="true" class="panel-button" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" class="panel-button panel-button-selected" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" class="panel-button" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" class="panel-button" />
+    </ui:VisualElement>
+</ui:UXML>
