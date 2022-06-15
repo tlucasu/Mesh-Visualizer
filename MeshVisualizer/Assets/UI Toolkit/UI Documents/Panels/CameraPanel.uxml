@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/UI%20Documents/TabbedMenu.uss?fileID=7433441132597879392&amp;guid=cc16ee631e6d120439e3ee6c4438b43b&amp;type=3#TabbedMenu" />
+    <ui:VisualElement name="post-processing-subtitle" class="subtitle-container">
+        <ui:Label text="Post Processing" display-tooltip-when-elided="true" class="subtitle" />
+    </ui:VisualElement>
+    <ui:VisualElement name="post-processing-container" />
+</ui:UXML>
