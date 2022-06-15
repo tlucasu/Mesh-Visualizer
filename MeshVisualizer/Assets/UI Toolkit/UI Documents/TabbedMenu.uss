@@ -3,7 +3,7 @@
 }
 
 .unity-button {
-    height: 25px;
+    height: 40px;
     background-color: rgba(140, 140, 140, 0.42);
     border-left-width: 0;
     border-right-width: 0;
@@ -13,7 +13,7 @@
     border-bottom-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    color: rgba(231, 231, 231, 255);
+    color: rgb(231, 231, 231);
     -unity-font-style: bold;
     font-size: 16px;
     -unity-text-align: middle-center;
@@ -27,13 +27,13 @@
 
 .unity-button:active {
     background-color: rgba(173, 173, 173, 0.66);
-    color: rgba(255, 255, 255, 255);
+    color: rgb(255, 255, 255);
 }
 
 .tab-button {
     min-width: 60px;
     background-color: rgba(50, 50, 50, 0.94);
-    color: rgba(166, 166, 166, 255);
+    color: rgb(166, 166, 166);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -47,7 +47,7 @@
 
 .tab-button:hover {
     background-color: rgba(58, 69, 91, 0.94);
-    color: rgba(255, 255, 255, 255);
+    color: rgb(255, 255, 255);
 }
 
 .tab-button:active {
@@ -56,7 +56,7 @@
 
 .selected-tab-button {
     background-color: rgba(60, 60, 60, 0.94);
-    color: rgba(255, 255, 255, 255);
+    color: rgb(255, 255, 255);
 }
 
 .scrollable-content {
