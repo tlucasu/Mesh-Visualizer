@@ -11,7 +11,6 @@ namespace MeshVisualizer.Controller {
 
         private Camera activeCamera => cameraController.activeCamera;
 
-
         public void OnScreenDrag(Vector2 pointerDelta) {
             Vector2 currentPointerScreenPosition = ScreenInputManager.Instance.pointerScreenPosition;
             Vector2 lastPointerScreenPosition = currentPointerScreenPosition - pointerDelta;
@@ -21,7 +20,10 @@ namespace MeshVisualizer.Controller {
         }
 
 
-        private void TranslateModel(Vector2 lastPointerScreenPosition, Vector2 currentPointerScreenPosition) {
+        /// <summary>
+        /// Moves the model along a plane by the same amount between two points on the screen
+        /// </summary>
+        private void TranslateModel(Vector2 lastScreenPoint, Vector2 currentScreenPoint) {
             //The conceptional idea behind this function is to take two points on a plane, the previous point and the
             //current point and to move the model by the difference between them, along the plane, regardless of the model's
             //position in the world.
@@ -30,9 +32,9 @@ namespace MeshVisualizer.Controller {
             Plane viewPlane = new Plane(-activeCamera.transform.forward, transformController.transform.position);
 
             //Gets the last position of the pointer on the plane
-            Vector3 lastWorldPoint = GetPointOnPlane(viewPlane, lastPointerScreenPosition);
+            Vector3 lastWorldPoint = GetPointOnPlane(viewPlane, lastScreenPoint);
             //Gets the current position of the pointer on the plane
-            Vector3 currentWorldPoint = GetPointOnPlane(viewPlane, currentPointerScreenPosition);
+            Vector3 currentWorldPoint = GetPointOnPlane(viewPlane, currentScreenPoint);
 
             //Gets the delta between the points
             Vector3 worldDelta = currentWorldPoint - lastWorldPoint;
@@ -40,35 +42,35 @@ namespace MeshVisualizer.Controller {
             //Because worldDelta is a delta between 2 points on a plane, the delta will be a vector3 that runs along the plane
             //This will move the model by that same amount
             transformController.TranslateWithConstraints(worldDelta);
-
-            // //Update Transform Panel
-            // transformPanel.SetPositionSliderValues(transformController.localPosition);
         }
 
-        private void RotateModel(Vector2 lastPointerScreenPosition, Vector2 currentPointerScreenPosition) {
-            //The conceptional idea behind this function is to take two points on a sphere find the angle between them and to rotate the model by that same angle
+        /// <summary>
+        /// Rotates the model using the axis and angle between two points on the screen
+        /// </summary>
+        private void RotateModel(Vector2 lastScreenPoint, Vector2 currentScreenPoint) {
+            var lastWorldPoint = activeCamera
+                .ScreenToWorldPoint(new Vector3(lastScreenPoint.x, lastScreenPoint.y, 1));
+            lastWorldPoint -= activeCamera.transform.position;
+            
+            var currentWorldPoint = activeCamera
+                .ScreenToWorldPoint(new Vector3(currentScreenPoint.x, currentScreenPoint.y, 1));
+            currentWorldPoint -= activeCamera.transform.position;
 
-            Plane viewPlane = new Plane(-activeCamera.transform.forward, transformController.transform.position);
-            Vector2 screenCenter = new Vector2(activeCamera.pixelWidth / 2, activeCamera.pixelHeight / 2);
-            Vector3 screenCenterWorldPoint = GetPointOnPlane(viewPlane, screenCenter);
-
-            var lastWorldPosition =
-                activeCamera.ScreenToWorldPoint(
-                    new Vector3(lastPointerScreenPosition.x, lastPointerScreenPosition.y, 1));
-            var currentWorldPosition = activeCamera.ScreenToWorldPoint(new Vector3(currentPointerScreenPosition.x,
-                currentPointerScreenPosition.y, 1));
-
-            var adjustedLWP = lastWorldPosition - screenCenterWorldPoint;
-            var adjustecCurrent = currentWorldPosition - screenCenterWorldPoint;
-
-            Vector3 axis = Vector3.Cross(adjustecCurrent, adjustedLWP).normalized;
+            //Get the axis for the rotation
+            Vector3 axis = Vector3.Cross(currentWorldPoint, lastWorldPoint).normalized;
+            //Transform the axis to be along the model's current rotation
             axis = Quaternion.Inverse(transformController.transform.localRotation) * axis;
 
-            float angle = -Vector3.Angle(adjustecCurrent, adjustedLWP) * rotationSpeed;
+            //Get the angle difference between the two points
+            float angle = Vector3.Angle(currentWorldPoint, lastWorldPoint) * rotationSpeed;
 
+            //Rotate the model
             transformController.Rotate(axis, angle);
         }
 
+        /// <summary>
+        /// From a point on the screen, returns a point on the plane
+        /// </summary>
         private Vector3 GetPointOnPlane(Plane plane, Vector2 screenPoint) {
             Ray screenPointRay = activeCamera.ScreenPointToRay(screenPoint);
 
@@ -77,7 +79,7 @@ namespace MeshVisualizer.Controller {
                 return positionOnPlane;
             }
 
-            Debug.LogError("Ray did not hit plane");
+            Debug.LogError($"Error: {this} ray {screenPointRay} cast did not hit the plane {plane}");
             return Vector3.zero;
         }
     }
