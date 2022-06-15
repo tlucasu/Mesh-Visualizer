@@ -12,11 +12,11 @@ namespace MeshVisualizer.Controller {
         private Camera activeCamera => cameraController.activeCamera;
 
         public void OnScreenDrag(Vector2 pointerDelta) {
-            Vector2 currentPointerScreenPosition = ScreenInputManager.Instance.pointerScreenPosition;
-            Vector2 lastPointerScreenPosition = currentPointerScreenPosition - pointerDelta;
+            // Vector2 currentPointerScreenPosition = ScreenInputManager.Instance.pointerScreenPosition;
+            // Vector2 lastPointerScreenPosition = currentPointerScreenPosition - pointerDelta;
 
             //TranslateModel(lastPointerScreenPosition, currentPointerScreenPosition);
-            RotateModel(lastPointerScreenPosition, currentPointerScreenPosition);
+            RotateModel(pointerDelta);
         }
 
 
@@ -45,24 +45,27 @@ namespace MeshVisualizer.Controller {
         }
 
         /// <summary>
-        /// Rotates the model using the axis and angle between two points on the screen
+        /// Rotates the model using the axis and angle by the delta (in pixels) on the screen.
         /// </summary>
-        private void RotateModel(Vector2 lastScreenPoint, Vector2 currentScreenPoint) {
-            var lastWorldPoint = activeCamera
-                .ScreenToWorldPoint(new Vector3(lastScreenPoint.x, lastScreenPoint.y, 1));
-            lastWorldPoint -= activeCamera.transform.position;
+        private void RotateModel(Vector2 screenDelta) {
+            Vector2 screenCenter = new Vector2(Screen.width / 2, Screen.height / 2);
+            screenDelta += screenCenter;
             
-            var currentWorldPoint = activeCamera
-                .ScreenToWorldPoint(new Vector3(currentScreenPoint.x, currentScreenPoint.y, 1));
-            currentWorldPoint -= activeCamera.transform.position;
+            var screenCenterWorldPoint = activeCamera
+                .ScreenToWorldPoint(new Vector3(screenCenter.x, screenCenter.y, 1));
+            screenCenterWorldPoint -= activeCamera.transform.position;
+            
+            var screenDeltaWorldPoint = activeCamera
+                .ScreenToWorldPoint(new Vector3(screenDelta.x, screenDelta.y, 1));
+            screenDeltaWorldPoint -= activeCamera.transform.position;
 
             //Get the axis for the rotation
-            Vector3 axis = Vector3.Cross(currentWorldPoint, lastWorldPoint).normalized;
+            Vector3 axis = Vector3.Cross(screenDeltaWorldPoint, screenCenterWorldPoint).normalized;
             //Transform the axis to be along the model's current rotation
             axis = Quaternion.Inverse(transformController.transform.localRotation) * axis;
 
             //Get the angle difference between the two points
-            float angle = Vector3.Angle(currentWorldPoint, lastWorldPoint) * rotationSpeed;
+            float angle = Vector3.Angle(screenDeltaWorldPoint, screenCenterWorldPoint) * rotationSpeed;
 
             //Rotate the model
             transformController.Rotate(axis, angle);
