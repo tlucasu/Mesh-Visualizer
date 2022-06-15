@@ -23,6 +23,8 @@ namespace MeshVisualizer.UI {
         private VisualElement objectContainer { get; set; }
         private VisualElement lastSelectedItem { get; set; }
         
+        public bool initialized { get; private set; }
+        
         protected void Start() {
             //using object container instead of content container for more flexibility if more
             //content is added to the object panel in the future
@@ -65,16 +67,25 @@ namespace MeshVisualizer.UI {
                 };
                 itemButton.AddToClassList(objectItemClass);
 
-                itemButton.clicked += () => {
-                    SelectItem(itemButton);
-                    onAssetClick?.Invoke(key);
-                };
+                itemButton.RegisterCallback<ClickEvent>(ItemClicked);
 
                 contentContainer.Add(itemButton);
             }
             
             Addressables.Release(handle);
+            initialized = true;
         }
+
+        private void ItemClicked(ClickEvent clickEvent) {
+            VisualElement itemButton = clickEvent.target as VisualElement;
+            SelectItem(itemButton);
+
+            string key = GetKey(itemButton);
+            onAssetClick?.Invoke(key);
+        }
+
+        private string GetKey(VisualElement itemButton) =>
+            itemButton.name.Substring(0, itemButton.name.Length - "-button".Length);
 
         private void SelectItem(VisualElement itemElement) {
             if(lastSelectedItem != null)
