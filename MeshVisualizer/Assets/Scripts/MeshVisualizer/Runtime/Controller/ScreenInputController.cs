@@ -2,7 +2,7 @@ using MeshVisualizer.Input;
 using UnityEngine;
 
 namespace MeshVisualizer.Controller {
-    public class ToolbarController : MonoBehaviour {
+    public class ScreenInputController : MonoBehaviour {
         [SerializeField] private CameraController cameraController;
 
         [SerializeField] private ModelTransformController transformController;
