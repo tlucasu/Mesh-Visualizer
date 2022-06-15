@@ -22,7 +22,7 @@ namespace MeshVisualizer.Controller {
         [AssetReferenceUILabelRestriction("Texture")]
         private AssetReference startingTexture;
         
-        private string currentModelAssetKey { get; set; }
+        internal string modelAssetKey { get; private set; }
         /// <summary>
         /// Reference to the current model loaded that is loaded
         /// </summary>
@@ -30,14 +30,14 @@ namespace MeshVisualizer.Controller {
         private MeshRenderer modelMeshRenderer { get; set; }
         
         
-        private string currentMaterialAssetKey { get; set; }
+        internal string materialAssetKey { get; private set; }
         /// <summary>
         /// Reference to an instance of the current material that is loaded
         /// </summary>
         public Material currentMaterial { get;  private set; }
         
         
-        private string currentTextureAssetKey { get; set; }
+        internal string textureAssetKey { get; private set; }
         /// <summary>
         /// Reference to the current 'texture' material that is loaded
         /// </summary>
@@ -84,17 +84,16 @@ namespace MeshVisualizer.Controller {
             destroyed = true;
         }
 
-
         /// <summary>
         /// Switches the model to an instance of the model loaded with the addressable address key
         /// </summary>
         public void SwitchModel(string addressableAddressKey) {
-            if (currentModelAssetKey == addressableAddressKey)
+            if (modelAssetKey == addressableAddressKey)
                 return;
             
-            currentModelAssetKey = addressableAddressKey;
+            modelAssetKey = addressableAddressKey;
             Addressables.InstantiateAsync(addressableAddressKey).Completed += handle => {
-                if (destroyed) {
+                if (destroyed || modelAssetKey != addressableAddressKey) {
                     Addressables.Release(handle);
                     return;
                 }
@@ -110,12 +109,12 @@ namespace MeshVisualizer.Controller {
         /// Switches the model's material to an instance of the material loaded with the addressable address key 
         /// </summary>
         public void SwitchMaterial(string addressableAddressKey) {
-            if (currentMaterialAssetKey == addressableAddressKey)
+            if (materialAssetKey == addressableAddressKey)
                 return;
 
-            currentMaterialAssetKey = addressableAddressKey;
+            materialAssetKey = addressableAddressKey;
             Addressables.LoadAssetAsync<Material>(addressableAddressKey).Completed += handle => {
-                if (destroyed) {
+                if (destroyed || materialAssetKey != addressableAddressKey) {
                     Addressables.Release(handle);
                     return;
                 }
@@ -130,12 +129,12 @@ namespace MeshVisualizer.Controller {
         /// Switches model's texture to the texture loaded with the addressable address key
         /// </summary>
         public void SwitchTexture(string addressableAddressKey) {
-            if (currentTextureAssetKey == addressableAddressKey)
+            if (textureAssetKey == addressableAddressKey)
                 return;
 
-            currentTextureAssetKey = addressableAddressKey;
+            textureAssetKey = addressableAddressKey;
             Addressables.LoadAssetAsync<Object>(addressableAddressKey).Completed += handle => {
-                if (destroyed) {
+                if (destroyed || textureAssetKey != addressableAddressKey) {
                     Addressables.Release(handle);
                     return;
                 }

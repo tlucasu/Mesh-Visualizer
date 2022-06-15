@@ -3,7 +3,6 @@ using System.Collections;
 using MeshVisualizer.Controller;
 using MeshVisualizer.UI;
 using NUnit.Framework;
-using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.UIElements;
@@ -11,6 +10,7 @@ using UnityEngine.UIElements;
 namespace Scene.Main.UserInterface {
     public class ObjectPanelTests : UserInterfaceTestBase {
         private const string buttonClassName = "panel-button";
+        private const string selectedButtonClassName = "selected-panel-button";
 
         private UIObjectPanel modelPanel { get; set; }
         private UIObjectPanel materialPanel { get; set; }
@@ -44,8 +44,13 @@ namespace Scene.Main.UserInterface {
                 1, "Initial model never loaded");
 
             GameObject previousModel = assetController.currentModel;
-            Button objectItemButton = modelPanel.contentContainer.Q<Button>(className:buttonClassName);
             
+            //Find first button that isn't 'selected'
+            Button objectItemButton = modelPanel.contentContainer
+                                                .Query<Button>(className: buttonClassName)
+                                                .ToList()
+                                                .Find(x=> !x.ClassListContains(selectedButtonClassName));
+
             SendClickEvent(objectItemButton);
             
             yield return WaitForCondition(() => assetController.currentModel != previousModel, 
@@ -62,7 +67,12 @@ namespace Scene.Main.UserInterface {
             yield return WaitForCondition(() => assetController.currentMaterial != null, 1);
             
             Material previousMaterial = assetController.currentMaterial;
-            Button objectItemButton = materialPanel.contentContainer.Q<Button>(className:buttonClassName);
+            
+            //Find first button that isn't 'selected'
+            Button objectItemButton = materialPanel.contentContainer
+                                                   .Query<Button>(className: buttonClassName)
+                                                   .ToList()
+                                                   .Find(x=> !x.ClassListContains(selectedButtonClassName));
             
             SendClickEvent(objectItemButton);
             
@@ -79,7 +89,12 @@ namespace Scene.Main.UserInterface {
             yield return WaitForCondition(() => assetController.currentTextureMaterial != null, 1);
             
             Material previousTextureMaterial = assetController.currentTextureMaterial;
-            Button objectItemButton = texturePanel.contentContainer.Q<Button>(className:buttonClassName);
+            
+            //Find first button that isn't 'selected'
+            Button objectItemButton = texturePanel.contentContainer
+                                                   .Query<Button>(className: buttonClassName)
+                                                   .ToList()
+                                                   .Find(x=> !x.ClassListContains(selectedButtonClassName));
             
             SendClickEvent(objectItemButton);
             
