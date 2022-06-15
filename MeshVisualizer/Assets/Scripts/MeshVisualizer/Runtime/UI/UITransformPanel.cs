@@ -1,4 +1,3 @@
-using System;
 using MeshVisualizer.Runtime.UI;
 using UnityEngine;
 using UnityEngine.UIElements;
