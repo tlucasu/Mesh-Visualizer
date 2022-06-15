@@ -3,13 +3,14 @@ using System.Collections;
 using MeshVisualizer.Controller;
 using MeshVisualizer.UI;
 using NUnit.Framework;
+using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.TestTools;
 using UnityEngine.UIElements;
 
 namespace Scene.Main.UserInterface {
     public class ObjectPanelTests : UserInterfaceTestBase {
-        private const string objectItemClass = "object-item";
+        private const string buttonClassName = "panel-button";
 
         private UIObjectPanel modelPanel { get; set; }
         private UIObjectPanel materialPanel { get; set; }
@@ -36,16 +37,19 @@ namespace Scene.Main.UserInterface {
         [UnityTest]
         public IEnumerator OnClick_ModelPanelItem_ChangesModel() {
             //waiting for the panel to initialize
-            yield return WaitForCondition(() => modelPanel.initialized, 1);
+            yield return WaitForCondition(() => modelPanel.initialized, 
+                1, "Model Panel never initialized");
             //wait for asset controller to finish loading starting asset
-            yield return WaitForCondition(() => assetController.currentModel != null, 1);
-            
+            yield return WaitForCondition(() => assetController.currentModel != null,
+                1, "Initial model never loaded");
+
             GameObject previousModel = assetController.currentModel;
-            Button objectItemButton = modelPanel.contentContainer.Q<Button>(className:objectItemClass);
+            Button objectItemButton = modelPanel.contentContainer.Q<Button>(className:buttonClassName);
             
             SendClickEvent(objectItemButton);
             
-            yield return WaitForCondition(() => assetController.currentModel != previousModel, 1);
+            yield return WaitForCondition(() => assetController.currentModel != previousModel, 
+                1, "Model never changed");
             
             Assert.AreNotEqual(assetController.currentModel, previousModel);
         }
@@ -58,7 +62,7 @@ namespace Scene.Main.UserInterface {
             yield return WaitForCondition(() => assetController.currentMaterial != null, 1);
             
             Material previousMaterial = assetController.currentMaterial;
-            Button objectItemButton = materialPanel.contentContainer.Q<Button>(className:objectItemClass);
+            Button objectItemButton = materialPanel.contentContainer.Q<Button>(className:buttonClassName);
             
             SendClickEvent(objectItemButton);
             
@@ -75,7 +79,7 @@ namespace Scene.Main.UserInterface {
             yield return WaitForCondition(() => assetController.currentTextureMaterial != null, 1);
             
             Material previousTextureMaterial = assetController.currentTextureMaterial;
-            Button objectItemButton = texturePanel.contentContainer.Q<Button>(className:objectItemClass);
+            Button objectItemButton = texturePanel.contentContainer.Q<Button>(className:buttonClassName);
             
             SendClickEvent(objectItemButton);
             
@@ -84,7 +88,7 @@ namespace Scene.Main.UserInterface {
             Assert.AreNotEqual(assetController.currentTextureMaterial, previousTextureMaterial);
         }
         
-        private IEnumerator WaitForCondition(Func<bool> condition, float timeout) {
+        private IEnumerator WaitForCondition(Func<bool> condition, float timeout, string exceptionMessage = null) {
             var startTime = Time.timeSinceLevelLoad;
             while (!condition.Invoke() 
                    && startTime + timeout > Time.timeSinceLevelLoad) {
@@ -92,7 +96,7 @@ namespace Scene.Main.UserInterface {
             }
 
             if (startTime + timeout < Time.timeSinceLevelLoad) {
-                throw new TimeoutException();
+                throw new TimeoutException(exceptionMessage);
             }
         }
     }
