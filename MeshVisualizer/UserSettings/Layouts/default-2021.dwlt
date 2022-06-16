@@ -14,41 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 1749
-    y: -1208
-    width: 495
-    height: 962
-  m_ShowMode: 0
-  m_Title: Lighting
-  m_RootView: {fileID: 5}
-  m_MinSize: {x: 390, y: 411}
-  m_MaxSize: {x: 4000, y: 4021}
-  m_Maximized: 0
---- !u!114 &2
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_PixelRect:
-    serializedVersion: 2
     x: 0
     y: 43
     width: 3440
     height: 1349
   m_ShowMode: 4
-  m_Title: Addressables Groups
-  m_RootView: {fileID: 13}
+  m_Title: Project
+  m_RootView: {fileID: 10}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
---- !u!114 &3
+--- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,13 +41,39 @@ MonoBehaviour:
     serializedVersion: 2
     x: 370
     y: 0
-    width: 427
+    width: 357
     height: 1299
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 25}
+  m_ActualView: {fileID: 20}
   m_Panes:
-  - {fileID: 25}
+  - {fileID: 20}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &3
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: TestRunnerWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 766
+    height: 802
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 16}
+  m_Panes:
+  - {fileID: 16}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &4
@@ -83,100 +85,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: LightingWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 495
-    height: 962
-  m_MinSize: {x: 390, y: 390}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 17}
-  m_Panes:
-  - {fileID: 17}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &5
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 4}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 495
-    height: 962
-  m_MinSize: {x: 390, y: 411}
-  m_MaxSize: {x: 4000, y: 4021}
-  vertical: 0
-  controlID: 62
---- !u!114 &6
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: AddressableAssetsWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 736
-    height: 807
-  m_MinSize: {x: 430, y: 250}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 22}
-  m_Panes:
-  - {fileID: 22}
-  - {fileID: 19}
-  m_Selected: 0
-  m_LastSelected: 1
---- !u!114 &7
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
+  - {fileID: 3}
   - {fileID: 6}
-  - {fileID: 9}
   m_Position:
     serializedVersion: 2
-    x: 2704
+    x: 2674
     y: 0
-    width: 736
+    width: 766
     height: 1299
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 160
---- !u!114 &8
+  controlID: 188
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,12 +122,12 @@ MonoBehaviour:
     height: 1299
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 24}
+  m_ActualView: {fileID: 19}
   m_Panes:
-  - {fileID: 24}
+  - {fileID: 19}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &9
+--- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -218,17 +143,17 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 807
-    width: 736
-    height: 492
+    y: 802
+    width: 766
+    height: 497
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 26}
+  m_ActualView: {fileID: 21}
   m_Panes:
-  - {fileID: 26}
+  - {fileID: 21}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &10
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,16 +170,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 901
-    width: 1907
+    width: 1947
     height: 398
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 23}
+  m_ActualView: {fileID: 18}
   m_Panes:
-  - {fileID: 23}
+  - {fileID: 18}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &11
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -267,19 +192,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 16}
-  - {fileID: 10}
+  - {fileID: 13}
+  - {fileID: 7}
   m_Position:
     serializedVersion: 2
-    x: 797
+    x: 727
     y: 0
-    width: 1907
+    width: 1947
     height: 1299
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 16
---- !u!114 &12
+  controlID: 305
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -292,10 +217,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
+  - {fileID: 5}
+  - {fileID: 2}
   - {fileID: 8}
-  - {fileID: 3}
-  - {fileID: 11}
-  - {fileID: 7}
+  - {fileID: 4}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -305,8 +230,8 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 159
---- !u!114 &13
+  controlID: 304
+--- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -319,9 +244,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 14}
+  - {fileID: 11}
+  - {fileID: 9}
   - {fileID: 12}
-  - {fileID: 15}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -334,7 +259,7 @@ MonoBehaviour:
   m_TopViewHeight: 30
   m_UseBottomView: 1
   m_BottomViewHeight: 20
---- !u!114 &14
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -356,7 +281,7 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &15
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -377,7 +302,7 @@ MonoBehaviour:
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &16
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -394,18 +319,18 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1907
+    width: 1947
     height: 901
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 20}
+  m_ActualView: {fileID: 14}
   m_Panes:
-  - {fileID: 21}
-  - {fileID: 20}
-  - {fileID: 18}
-  m_Selected: 1
-  m_LastSelected: 0
---- !u!114 &17
+  - {fileID: 17}
+  - {fileID: 15}
+  - {fileID: 14}
+  m_Selected: 2
+  m_LastSelected: 1
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -414,26 +339,90 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 12079, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 390, y: 390}
+  m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Lighting
-    m_Image: {fileID: -1347227620855488341, guid: 0000000000000000d000000000000000, type: 0}
+    m_Text: Game
+    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1749
-    y: -1208
-    width: 495
-    height: 941
+    x: 727
+    y: 73
+    width: 1945
+    height: 880
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &18
+  m_SerializedViewNames: []
+  m_SerializedViewValues: []
+  m_PlayModeViewName: GameView
+  m_ShowGizmos: 0
+  m_TargetDisplay: 0
+  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+  m_TargetSize: {x: 1945, y: 859}
+  m_TextureFilterMode: 0
+  m_TextureHideFlags: 61
+  m_RenderIMGUI: 1
+  m_EnterPlayModeBehavior: 0
+  m_UseMipMap: 0
+  m_VSyncEnabled: 0
+  m_Gizmos: 0
+  m_Stats: 0
+  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_ZoomArea:
+    m_HRangeLocked: 0
+    m_VRangeLocked: 0
+    hZoomLockedByDefault: 0
+    vZoomLockedByDefault: 0
+    m_HBaseRangeMin: -972.5
+    m_HBaseRangeMax: 972.5
+    m_VBaseRangeMin: -429.5
+    m_VBaseRangeMax: 429.5
+    m_HAllowExceedBaseRangeMin: 1
+    m_HAllowExceedBaseRangeMax: 1
+    m_VAllowExceedBaseRangeMin: 1
+    m_VAllowExceedBaseRangeMax: 1
+    m_ScaleWithWindow: 0
+    m_HSlider: 0
+    m_VSlider: 0
+    m_IgnoreScrollWheelUntilClicked: 0
+    m_EnableMouseInput: 1
+    m_EnableSliderZoomHorizontal: 0
+    m_EnableSliderZoomVertical: 0
+    m_UniformScale: 1
+    m_UpDirection: 1
+    m_DrawArea:
+      serializedVersion: 2
+      x: 0
+      y: 21
+      width: 1945
+      height: 859
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 972.5, y: 429.5}
+    m_MarginLeft: 0
+    m_MarginRight: 0
+    m_MarginTop: 0
+    m_MarginBottom: 0
+    m_LastShownAreaInsideMargins:
+      serializedVersion: 2
+      x: -972.5
+      y: -429.5
+      width: 1945
+      height: 859
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 1945, y: 880}
+  m_ClearInEditMode: 1
+  m_NoCameraWarning: 1
+  m_LowResolutionForAspectRatios: 01000000000000000000
+  m_XRRenderMode: 0
+  m_RenderTexture: {fileID: 0}
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -453,15 +442,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 797
+    x: 727
     y: 73
-    width: 1905
+    width: 1975
     height: 880
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &19
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -481,21 +470,21 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2679
+    x: 2674
     y: 73
-    width: 760
-    height: 786
+    width: 765
+    height: 781
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 253
+    ID: 6119
     splitterInitialOffset: 419
     currentActiveSplitter: -1
     realSizes:
-    - 351
-    - 365
+    - 349
+    - 362
     relativeSizes:
     - 0.49022347
     - 0.50977653
@@ -505,7 +494,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 716
+    lastTotalSize: 711
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -515,15 +504,15 @@ MonoBehaviour:
     oldSplitSize: 0
   m_TestTypeToolbarIndex: 0
   m_PlayModeTestListGUI:
-    m_Window: {fileID: 19}
+    m_Window: {fileID: 16}
     m_NewResultList:
     - id: 1005
       uniqueId: '[MeshVisualizer][suite]'
       name: MeshVisualizer
       fullName: MeshVisualizer
-      resultStatus: 2
-      duration: 4.5494018
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 2.2389805
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -537,9 +526,9 @@ MonoBehaviour:
       uniqueId: '[MeshVisualizer.Tests][C:/Users/tlucas/gitlab/Mesh-Visualizer/MeshVisualizer/Library/ScriptAssemblies/MeshVisualizer.Tests.dll][suite]'
       name: MeshVisualizer.Tests.dll
       fullName: C:/Users/tlucas/gitlab/Mesh-Visualizer/MeshVisualizer/Library/ScriptAssemblies/MeshVisualizer.Tests.dll
-      resultStatus: 2
-      duration: 4.194096
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 2.0028207
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -554,7 +543,7 @@ MonoBehaviour:
       name: ModelAssetControllerTests
       fullName: ModelAssetControllerTests
       resultStatus: 1
-      duration: 1.6429572
+      duration: 0.6472194
       messages: 
       output: 
       stacktrace: 
@@ -570,7 +559,7 @@ MonoBehaviour:
       name: SwitchMaterial_LoadsNewMaterial
       fullName: ModelAssetControllerTests.SwitchMaterial_LoadsNewMaterial
       resultStatus: 1
-      duration: 0.975236
+      duration: 0.1786637
       messages: 
       output: 
       stacktrace: 
@@ -587,7 +576,7 @@ MonoBehaviour:
       name: SwitchMaterial_SwitchesModelsMaterial
       fullName: ModelAssetControllerTests.SwitchMaterial_SwitchesModelsMaterial
       resultStatus: 1
-      duration: 0.2267467
+      duration: 0.2225977
       messages: 
       output: 
       stacktrace: 
@@ -604,7 +593,7 @@ MonoBehaviour:
       name: SwitchModel_LoadsNewModel
       fullName: ModelAssetControllerTests.SwitchModel_LoadsNewModel
       resultStatus: 1
-      duration: 0.0055308
+      duration: 0.0062189
       messages: 
       output: 
       stacktrace: 
@@ -621,7 +610,7 @@ MonoBehaviour:
       name: SwitchTexture_LoadsNewTexture
       fullName: ModelAssetControllerTests.SwitchTexture_LoadsNewTexture
       resultStatus: 1
-      duration: 0.1206398
+      duration: 0.1067627
       messages: 
       output: 
       stacktrace: 
@@ -638,7 +627,7 @@ MonoBehaviour:
       name: SwitchTexture_SwitchesModelsTexture
       fullName: ModelAssetControllerTests.SwitchTexture_SwitchesModelsTexture
       resultStatus: 1
-      duration: 0.1133153
+      duration: 0.1109258
       messages: 
       output: 
       stacktrace: 
@@ -655,7 +644,7 @@ MonoBehaviour:
       name: ModelTransformControllerTests
       fullName: ModelTransformControllerTests
       resultStatus: 1
-      duration: 0.020639
+      duration: 0.0193905
       messages: 
       output: 
       stacktrace: 
@@ -671,7 +660,7 @@ MonoBehaviour:
       name: SetLocalPositionWithConstraints
       fullName: ModelTransformControllerTests.SetLocalPositionWithConstraints
       resultStatus: 1
-      duration: 0.0075607
+      duration: 0.0069204
       messages: 
       output: 
       stacktrace: 
@@ -687,7 +676,7 @@ MonoBehaviour:
       name: SetLocalPositionWithConstraints(0,0,0)
       fullName: ModelTransformControllerTests.SetLocalPositionWithConstraints(0,0,0)
       resultStatus: 1
-      duration: 0.0042007
+      duration: 0.0039348
       messages: 
       output: 
       stacktrace: 
@@ -704,7 +693,7 @@ MonoBehaviour:
       name: SetLocalPositionWithConstraints(0.2f,0.3f,0.4f)
       fullName: ModelTransformControllerTests.SetLocalPositionWithConstraints(0.2f,0.3f,0.4f)
       resultStatus: 1
-      duration: 0.0001588
+      duration: 0.0001561
       messages: 
       output: 
       stacktrace: 
@@ -721,7 +710,7 @@ MonoBehaviour:
       name: SetLocalPositionWithConstraints(-0.2f,0.3f,-0.4f)
       fullName: ModelTransformControllerTests.SetLocalPositionWithConstraints(-0.2f,0.3f,-0.4f)
       resultStatus: 1
-      duration: 0.0001302
+      duration: 0.0001334
       messages: 
       output: 
       stacktrace: 
@@ -738,7 +727,7 @@ MonoBehaviour:
       name: SetLocalPositionWithConstraints(-41,-10,-15.4f)
       fullName: ModelTransformControllerTests.SetLocalPositionWithConstraints(-41,-10,-15.4f)
       resultStatus: 1
-      duration: 0.0001191
+      duration: 0.0001341
       messages: 
       output: 
       stacktrace: 
@@ -755,7 +744,7 @@ MonoBehaviour:
       name: SetLocalPositionWithConstraints(41,10,15.4f)
       fullName: ModelTransformControllerTests.SetLocalPositionWithConstraints(41,10,15.4f)
       resultStatus: 1
-      duration: 0.0001185
+      duration: 0.0001233
       messages: 
       output: 
       stacktrace: 
@@ -772,7 +761,7 @@ MonoBehaviour:
       name: SetLocalPositionWithConstraints(1,1,1)
       fullName: ModelTransformControllerTests.SetLocalPositionWithConstraints(1,1,1)
       resultStatus: 1
-      duration: 0.0001254
+      duration: 0.0001174
       messages: 
       output: 
       stacktrace: 
@@ -789,7 +778,7 @@ MonoBehaviour:
       name: SetLocalPositionWithConstraints(1.1324f,-1.04f,1.3f)
       fullName: ModelTransformControllerTests.SetLocalPositionWithConstraints(1.1324f,-1.04f,1.3f)
       resultStatus: 1
-      duration: 0.0001204
+      duration: 0.0002491
       messages: 
       output: 
       stacktrace: 
@@ -806,7 +795,7 @@ MonoBehaviour:
       name: SetLocalRotation
       fullName: ModelTransformControllerTests.SetLocalRotation
       resultStatus: 1
-      duration: 0.0047255
+      duration: 0.0042802
       messages: 
       output: 
       stacktrace: 
@@ -822,7 +811,7 @@ MonoBehaviour:
       name: SetLocalRotation(0,0,0)
       fullName: ModelTransformControllerTests.SetLocalRotation(0,0,0)
       resultStatus: 1
-      duration: 0.0012597
+      duration: 0.0011098
       messages: 
       output: 
       stacktrace: 
@@ -839,7 +828,7 @@ MonoBehaviour:
       name: SetLocalRotation(-90,90,-90)
       fullName: ModelTransformControllerTests.SetLocalRotation(-90,90,-90)
       resultStatus: 1
-      duration: 0.0001956
+      duration: 0.0001367
       messages: 
       output: 
       stacktrace: 
@@ -856,7 +845,7 @@ MonoBehaviour:
       name: SetLocalRotation(90,180,-180)
       fullName: ModelTransformControllerTests.SetLocalRotation(90,180,-180)
       resultStatus: 1
-      duration: 0.0001803
+      duration: 0.0001219
       messages: 
       output: 
       stacktrace: 
@@ -873,7 +862,7 @@ MonoBehaviour:
       name: SetLocalScale
       fullName: ModelTransformControllerTests.SetLocalScale
       resultStatus: 1
-      duration: 0.0045267
+      duration: 0.004249
       messages: 
       output: 
       stacktrace: 
@@ -889,7 +878,7 @@ MonoBehaviour:
       name: SetLocalScale(0)
       fullName: ModelTransformControllerTests.SetLocalScale(0)
       resultStatus: 1
-      duration: 0.0008456
+      duration: 0.0007638
       messages: 
       output: 
       stacktrace: 
@@ -906,7 +895,7 @@ MonoBehaviour:
       name: SetLocalScale(-1)
       fullName: ModelTransformControllerTests.SetLocalScale(-1)
       resultStatus: 1
-      duration: 0.0001902
+      duration: 0.0001317
       messages: 
       output: 
       stacktrace: 
@@ -923,7 +912,7 @@ MonoBehaviour:
       name: SetLocalScale(2)
       fullName: ModelTransformControllerTests.SetLocalScale(2)
       resultStatus: 1
-      duration: 0.0001773
+      duration: 0.0001241
       messages: 
       output: 
       stacktrace: 
@@ -940,7 +929,7 @@ MonoBehaviour:
       name: SetLocalScale(2.5f)
       fullName: ModelTransformControllerTests.SetLocalScale(2.5f)
       resultStatus: 1
-      duration: 0.0001709
+      duration: 0.0001159
       messages: 
       output: 
       stacktrace: 
@@ -957,7 +946,7 @@ MonoBehaviour:
       name: SetLocalScale(-1023.343f)
       fullName: ModelTransformControllerTests.SetLocalScale(-1023.343f)
       resultStatus: 1
-      duration: 0.0002373
+      duration: 0.0001187
       messages: 
       output: 
       stacktrace: 
@@ -973,9 +962,9 @@ MonoBehaviour:
       uniqueId: MeshVisualizer.Tests.dll/[Scene][suite]
       name: Scene
       fullName: Scene
-      resultStatus: 2
-      duration: 4.178168
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 1.3279953
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -989,9 +978,9 @@ MonoBehaviour:
       uniqueId: MeshVisualizer.Tests.dll/Scene/[Main][suite]
       name: Main
       fullName: Scene.Main
-      resultStatus: 2
-      duration: 4.176192
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 1.3252305
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1005,9 +994,9 @@ MonoBehaviour:
       uniqueId: MeshVisualizer.Tests.dll/Scene/Main/[MeshVisualizer.Tests][Scene.Main.UserInterface][suite]
       name: UserInterface
       fullName: Scene.Main.UserInterface
-      resultStatus: 2
-      duration: 4.174745
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 1.3240805
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1021,9 +1010,9 @@ MonoBehaviour:
       uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/[MeshVisualizer.Tests][Scene.Main.UserInterface.ObjectPanelTests][suite]
       name: ObjectPanelTests
       fullName: Scene.Main.UserInterface.ObjectPanelTests
-      resultStatus: 2
-      duration: 4.172069
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.6780715
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1037,14 +1026,11 @@ MonoBehaviour:
       uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/ObjectPanelTests/[MeshVisualizer.Tests][Scene.Main.UserInterface.ObjectPanelTests.OnClick_MaterialPanelItem_ChangesMaterialOnModel]
       name: OnClick_MaterialPanelItem_ChangesMaterialOnModel
       fullName: Scene.Main.UserInterface.ObjectPanelTests.OnClick_MaterialPanelItem_ChangesMaterialOnModel
-      resultStatus: 2
-      duration: 2.581593
-      messages: 'System.TimeoutException : The operation has timed out.'
+      resultStatus: 1
+      duration: 0.3706107
+      messages: 
       output: 
-      stacktrace: "  at Scene.Main.UserInterface.ObjectPanelTests+<WaitForCondition>d__21.MoveNext
-        () [0x00070] in C:\\Users\\tlucas\\gitlab\\Mesh-Visualizer\\MeshVisualizer\\Assets\\Scripts\\MeshVisualizer\\Tests\\Runtime\\UserInterface\\ObjectPanelTests.cs:95
-        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
-        in C:\\Users\\tlucas\\gitlab\\Mesh-Visualizer\\MeshVisualizer\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1058,7 +1044,7 @@ MonoBehaviour:
       name: OnClick_ModelPanelItem_ChangesModel
       fullName: Scene.Main.UserInterface.ObjectPanelTests.OnClick_ModelPanelItem_ChangesModel
       resultStatus: 1
-      duration: 0.3128764
+      duration: 0.2122288
       messages: 
       output: 
       stacktrace: 
@@ -1074,14 +1060,11 @@ MonoBehaviour:
       uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/ObjectPanelTests/[MeshVisualizer.Tests][Scene.Main.UserInterface.ObjectPanelTests.OnClick_TexturePanelItem_ChangesTextureOnModel]
       name: OnClick_TexturePanelItem_ChangesTextureOnModel
       fullName: Scene.Main.UserInterface.ObjectPanelTests.OnClick_TexturePanelItem_ChangesTextureOnModel
-      resultStatus: 2
-      duration: 1.0666227
-      messages: 'System.TimeoutException : The operation has timed out.'
+      resultStatus: 1
+      duration: 0.0933679
+      messages: 
       output: 
-      stacktrace: "  at Scene.Main.UserInterface.ObjectPanelTests+<WaitForCondition>d__21.MoveNext
-        () [0x00070] in C:\\Users\\tlucas\\gitlab\\Mesh-Visualizer\\MeshVisualizer\\Assets\\Scripts\\MeshVisualizer\\Tests\\Runtime\\UserInterface\\ObjectPanelTests.cs:95
-        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
-        in C:\\Users\\tlucas\\gitlab\\Mesh-Visualizer\\MeshVisualizer\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1094,8 +1077,8 @@ MonoBehaviour:
       uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/[MeshVisualizer.Tests][Scene.Main.UserInterface.TabbedMenuTests][suite]
       name: TabbedMenuTests
       fullName: Scene.Main.UserInterface.TabbedMenuTests
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.2899078
       messages: 
       output: 
       stacktrace: 
@@ -1110,8 +1093,8 @@ MonoBehaviour:
       uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/TabbedMenuTests/[MeshVisualizer.Tests][Scene.Main.UserInterface.TabbedMenuTests.MouseOver_Screen_HidesPanel]
       name: MouseOver_Screen_HidesPanel
       fullName: Scene.Main.UserInterface.TabbedMenuTests.MouseOver_Screen_HidesPanel
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.062722
       messages: 
       output: 
       stacktrace: 
@@ -1127,8 +1110,8 @@ MonoBehaviour:
       uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/TabbedMenuTests/[MeshVisualizer.Tests][Scene.Main.UserInterface.TabbedMenuTests.MouseOver_Spacer_HidesPanel]
       name: MouseOver_Spacer_HidesPanel
       fullName: Scene.Main.UserInterface.TabbedMenuTests.MouseOver_Spacer_HidesPanel
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0777786
       messages: 
       output: 
       stacktrace: 
@@ -1144,8 +1127,8 @@ MonoBehaviour:
       uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/TabbedMenuTests/[MeshVisualizer.Tests][Scene.Main.UserInterface.TabbedMenuTests.MouseOver_Tab_DisplaysContent]
       name: MouseOver_Tab_DisplaysContent
       fullName: Scene.Main.UserInterface.TabbedMenuTests.MouseOver_Tab_DisplaysContent
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0750704
       messages: 
       output: 
       stacktrace: 
@@ -1161,8 +1144,8 @@ MonoBehaviour:
       uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/TabbedMenuTests/[MeshVisualizer.Tests][Scene.Main.UserInterface.TabbedMenuTests.MouseOver_Tab_DisplaysPanel]
       name: MouseOver_Tab_DisplaysPanel
       fullName: Scene.Main.UserInterface.TabbedMenuTests.MouseOver_Tab_DisplaysPanel
-      resultStatus: 0
-      duration: 0
+      resultStatus: 1
+      duration: 0.0696879
       messages: 
       output: 
       stacktrace: 
@@ -1178,8 +1161,8 @@ MonoBehaviour:
       uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/[MeshVisualizer.Tests][Scene.Main.UserInterface.TransformPanelTests][suite]
       name: TransformPanelTests
       fullName: Scene.Main.UserInterface.TransformPanelTests
-      resultStatus: 0
-      duration: 1.4081305
+      resultStatus: 1
+      duration: 0.354604
       messages: 
       output: 
       stacktrace: 
@@ -1194,8 +1177,8 @@ MonoBehaviour:
       uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/TransformPanelTests/[MeshVisualizer.Tests][Scene.Main.UserInterface.TransformPanelTests.OnClick_PositionResetButton_ResetsModelPosition]
       name: OnClick_PositionResetButton_ResetsModelPosition
       fullName: Scene.Main.UserInterface.TransformPanelTests.OnClick_PositionResetButton_ResetsModelPosition
-      resultStatus: 0
-      duration: 0.7094875
+      resultStatus: 1
+      duration: 0.0637829
       messages: 
       output: 
       stacktrace: 
@@ -1211,8 +1194,8 @@ MonoBehaviour:
       uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/TransformPanelTests/[MeshVisualizer.Tests][Scene.Main.UserInterface.TransformPanelTests.OnClick_RotationResetButton_ResetsModelRotation]
       name: OnClick_RotationResetButton_ResetsModelRotation
       fullName: Scene.Main.UserInterface.TransformPanelTests.OnClick_RotationResetButton_ResetsModelRotation
-      resultStatus: 0
-      duration: 0.2835785
+      resultStatus: 1
+      duration: 0.0686401
       messages: 
       output: 
       stacktrace: 
@@ -1228,8 +1211,8 @@ MonoBehaviour:
       uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/TransformPanelTests/[MeshVisualizer.Tests][Scene.Main.UserInterface.TransformPanelTests.OnClick_ScaleResetButton_ResetsModelScale]
       name: OnClick_ScaleResetButton_ResetsModelScale
       fullName: Scene.Main.UserInterface.TransformPanelTests.OnClick_ScaleResetButton_ResetsModelScale
-      resultStatus: 0
-      duration: 0.0754329
+      resultStatus: 1
+      duration: 0.0674051
       messages: 
       output: 
       stacktrace: 
@@ -1245,8 +1228,8 @@ MonoBehaviour:
       uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/TransformPanelTests/[MeshVisualizer.Tests][Scene.Main.UserInterface.TransformPanelTests.OnDisplay_Sliders_UpdateValues]
       name: OnDisplay_Sliders_UpdateValues
       fullName: Scene.Main.UserInterface.TransformPanelTests.OnDisplay_Sliders_UpdateValues
-      resultStatus: 0
-      duration: 0.131121
+      resultStatus: 1
+      duration: 0.0708866
       messages: 
       output: 
       stacktrace: 
@@ -1262,8 +1245,8 @@ MonoBehaviour:
       uniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/TransformPanelTests/[MeshVisualizer.Tests][Scene.Main.UserInterface.TransformPanelTests.OnValueChange_Sliders_UpdateTargetTransform]
       name: OnValueChange_Sliders_UpdateTargetTransform
       fullName: Scene.Main.UserInterface.TransformPanelTests.OnValueChange_Sliders_UpdateTargetTransform
-      resultStatus: 0
-      duration: 0.0660278
+      resultStatus: 1
+      duration: 0.06841
       messages: 
       output: 
       stacktrace: 
@@ -1275,15 +1258,10 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1029
       parentUniqueId: MeshVisualizer.Tests.dll/Scene/Main/UserInterface/[MeshVisualizer.Tests][Scene.Main.UserInterface.TransformPanelTests][suite]
-    m_ResultText: 'ObjectPanelTests (4.172s)
-
-      ---
-
-      One or more child
-      tests had errors'
+    m_ResultText: ObjectPanelTests (0.678s)
     m_ResultStacktrace: 
     m_TestListState:
-      scrollPos: {x: 0, y: 133}
+      scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 12fec225
       m_LastClickedID: 633536018
       m_ExpandedIDs: 0e8aa3898d8ec9a1c9887da5acdf10cd2ee7b7d3c1fb00f798cb05fa69a38dfeab0a3a052748282212fec22581cbf633bd403d39d3d7284e216976585f835559cc2abd5bfb8d346cffffff7f
@@ -1314,7 +1292,7 @@ MonoBehaviour:
       - Uncategorized
     m_SelectedOption: 0
   m_EditModeTestListGUI:
-    m_Window: {fileID: 19}
+    m_Window: {fileID: 16}
     m_NewResultList:
     - id: 1000
       uniqueId: '[MeshVisualizer][suite]'
@@ -1364,99 +1342,7 @@ MonoBehaviour:
       selectedCategoryMask: 0
       availableCategories:
       - Uncategorized
---- !u!114 &20
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Game
-    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 797
-    y: 73
-    width: 1905
-    height: 880
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_SerializedViewNames: []
-  m_SerializedViewValues: []
-  m_PlayModeViewName: GameView
-  m_ShowGizmos: 0
-  m_TargetDisplay: 0
-  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1905, y: 859}
-  m_TextureFilterMode: 0
-  m_TextureHideFlags: 61
-  m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 0
-  m_UseMipMap: 0
-  m_VSyncEnabled: 0
-  m_Gizmos: 0
-  m_Stats: 1
-  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-  m_ZoomArea:
-    m_HRangeLocked: 0
-    m_VRangeLocked: 0
-    hZoomLockedByDefault: 0
-    vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -952.5
-    m_HBaseRangeMax: 952.5
-    m_VBaseRangeMin: -429.5
-    m_VBaseRangeMax: 429.5
-    m_HAllowExceedBaseRangeMin: 1
-    m_HAllowExceedBaseRangeMax: 1
-    m_VAllowExceedBaseRangeMin: 1
-    m_VAllowExceedBaseRangeMax: 1
-    m_ScaleWithWindow: 0
-    m_HSlider: 0
-    m_VSlider: 0
-    m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
-    m_EnableSliderZoomHorizontal: 0
-    m_EnableSliderZoomVertical: 0
-    m_UniformScale: 1
-    m_UpDirection: 1
-    m_DrawArea:
-      serializedVersion: 2
-      x: 0
-      y: 21
-      width: 1905
-      height: 859
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 952.5, y: 429.5}
-    m_MarginLeft: 0
-    m_MarginRight: 0
-    m_MarginTop: 0
-    m_MarginBottom: 0
-    m_LastShownAreaInsideMargins:
-      serializedVersion: 2
-      x: -952.5
-      y: -429.5
-      width: 1905
-      height: 859
-    m_MinimalGUI: 1
-  m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1905, y: 880}
-  m_ClearInEditMode: 1
-  m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 01000000000000000000
-  m_XRRenderMode: 0
-  m_RenderTexture: {fileID: 0}
---- !u!114 &21
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1476,9 +1362,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 797
+    x: 727
     y: 73
-    width: 1905
+    width: 1975
     height: 880
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1783,124 +1669,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &22
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e98b4a8982e76bc4d86c10db25cd7193, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 430, y: 250}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Addressables Groups
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 2704
-    y: 73
-    width: 735
-    height: 786
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_GroupEditor:
-    m_TreeState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 8d5630c9
-      m_LastClickedID: -919578995
-      m_ExpandedIDs: 873dce8408b923d8bcb45fefffffffff6b4e323af0d40659a9e12164
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: 0
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 11
-        m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 6}
-      m_SearchString: 
-    m_Mchs:
-      m_Columns:
-      - width: 319.2983
-        sortedAscending: 0
-        headerContent:
-          m_Text: Group Name \ Addressable Name
-          m_Image: {fileID: 0}
-          m_Tooltip: Address used to load asset at runtime
-        contextMenuText: 
-        headerTextAlignment: 0
-        sortingArrowAlignment: 1
-        minWidth: 100
-        maxWidth: 10000
-        autoResize: 1
-        allowToggleVisibility: 1
-        canSort: 1
-        userData: 0
-      - width: 20
-        sortedAscending: 0
-        headerContent:
-          m_Text: 
-          m_Image: {fileID: 3147778976006948682, guid: 0000000000000000d000000000000000, type: 0}
-          m_Tooltip: Asset type
-        contextMenuText: 
-        headerTextAlignment: 0
-        sortingArrowAlignment: 1
-        minWidth: 20
-        maxWidth: 20
-        autoResize: 1
-        allowToggleVisibility: 1
-        canSort: 0
-        userData: 0
-      - width: 184.21045
-        sortedAscending: 0
-        headerContent:
-          m_Text: Path
-          m_Image: {fileID: 0}
-          m_Tooltip: Current Path of asset
-        contextMenuText: 
-        headerTextAlignment: 0
-        sortingArrowAlignment: 1
-        minWidth: 100
-        maxWidth: 10000
-        autoResize: 1
-        allowToggleVisibility: 1
-        canSort: 1
-        userData: 0
-      - width: 196.49129
-        sortedAscending: 0
-        headerContent:
-          m_Text: Labels
-          m_Image: {fileID: 0}
-          m_Tooltip: Assets can have multiple labels
-        contextMenuText: 
-        headerTextAlignment: 0
-        sortingArrowAlignment: 1
-        minWidth: 20
-        maxWidth: 1000
-        autoResize: 1
-        allowToggleVisibility: 1
-        canSort: 1
-        userData: 0
-      m_VisibleColumns: 00000000010000000200000003000000
-      m_SortedColumns: 
-    window: {fileID: 22}
-    m_VerticalSplitterPercent: 0.802799
---- !u!114 &23
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1920,9 +1689,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 797
+    x: 727
     y: 974
-    width: 1905
+    width: 1945
     height: 377
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1941,22 +1710,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/StreamingAssets
+    - Assets/UI Toolkit/UI Documents/Panels
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/StreamingAssets
+  - Assets/UI Toolkit/UI Documents/Panels
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\tlucas\gitlab\Mesh-Visualizer\MeshVisualizer
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 84940000
-    m_LastClickedID: 38020
-    m_ExpandedIDs: 00000000827100008471000086710000887100008e71000090710000927100009471000096710000987100009a7100009c7100009e710000a0710000a2710000a4710000aa710000ac710000367300003e730000727700007677000000ca9a3b
+    scrollPos: {x: 0, y: 75}
+    m_SelectedIDs: e2e30000
+    m_LastClickedID: 58338
+    m_ExpandedIDs: 00000000e0710000e2710000e4710000e6710000e8710000ea710000ec710000ee710000f0710000f2710000f4710000f6710000f8710000fa710000fc710000fe710000007200000272000004720000087200000a720000187200001a7200002672000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1972,7 +1741,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 7}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -1984,7 +1753,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000827100008471000086710000887100008a7100008c7100008e71000090710000927100009471000096710000987100009a7100009c7100009e710000a0710000a2710000a4710000a6710000a8710000aa710000ac710000
+    m_ExpandedIDs: 00000000e0710000e2710000e4710000e6710000e8710000ea710000ec710000ee710000f0710000f2710000f4710000f6710000f8710000fa710000fc710000fe71000000720000027200000472000006720000087200000a720000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2028,7 +1797,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 7}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -2040,7 +1809,7 @@ MonoBehaviour:
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
---- !u!114 &24
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2081,7 +1850,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &25
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2103,7 +1872,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 370
     y: 73
-    width: 425
+    width: 355
     height: 1278
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -2112,9 +1881,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: f0700000
       m_LastClickedID: 0
-      m_ExpandedIDs: aa17feff4018feff561afeff7248ffff2475ffff2afbffff1870000020700000347000003c70000042700000
+      m_ExpandedIDs: f05efeff925ffeffa861feff8664feff2665feff706dfeffe0b1feff86b2feff9cb4feff70b5feff2ce3feffbee3feff3ae7feff94edfeff28eefeffaef1feff62f5fefff6f5feff68f9feffe422ffff7c23ffff9225ffff6826ffffca33ffff5e34ffff2837ffff4e3dffffe23dffffd045ffff064affff9a4affff1e4effff7a52ffff0e53ffff8256ffffc6a9ffff5aaaffff70acffff40adffff6ab6fffffeb6ffff14b9ffff2ec1ffffc2c1ffffd8c3ffff52e5ffffe8e5ffff04e6ffff54f4ffffeaf4ffff00f7ffff24fbffffd0910000ceb30000d6b30000f2b3000070c8000094c80000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2130,7 +1899,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 3}
+        m_ClientGUIView: {fileID: 2}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -2138,7 +1907,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &26
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2158,10 +1927,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2704
-    y: 880
-    width: 735
-    height: 471
+    x: 2674
+    y: 875
+    width: 765
+    height: 476
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
