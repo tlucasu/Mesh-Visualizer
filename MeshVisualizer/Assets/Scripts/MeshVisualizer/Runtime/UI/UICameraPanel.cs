@@ -70,9 +70,12 @@ namespace MeshVisualizer.UI {
             postProcessingContainer.Clear();
 
             foreach (var component in profile.components) {
+                //Removes (Clone) from the name
+                string name = component.name.Replace("(Clone)", "");
+                
                 Button toggleButton = new Button() {
-                    name = $"{component.name}-button",
-                    text = component.name
+                    name = $"{name}-button",
+                    text = name
                 };
                 toggleButton.AddToClassList(panelButtonClassName);
                 

@@ -12,7 +12,7 @@ namespace MeshVisualizer.Controller {
         }
 
         public void ToggleComponent(string componentName) {
-            var component = profile.components.Find(x => x.name == componentName);
+            var component = profile.components.Find(x => x.name.Contains(componentName));
             if (component == null) {
                 return;
             }
